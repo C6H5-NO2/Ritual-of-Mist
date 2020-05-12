@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3af9d330cddbe3441988313e75d09250, type: 3}
-  m_Name: MiddleBottle
+  m_Name: SmallBottle
   m_EditorClassIdentifier: 
-  itemName: Middle Bottle
-  itemImage: {fileID: 21300000, guid: e0a5c89c60e69e546aa76414d432a153, type: 3}
+  itemName: Small Bottle
+  itemImage: {fileID: 21300000, guid: 318adef81a2b74a4788f4ee58327b20d, type: 3}
   itemHeldCount: 0
-  itemInfo: "\u4E2D\u7B49\u5BB9\u91CF\u7684\u74F6\u5B50\uFF0C\u4E3A\u4E86\u4FBF\u4E8E\u56FA\u5B9A\u91C7\u53D6\u4E86\u5E95\u90E8\u6241\u5E73\u7684\u8BBE\u8BA1"
+  itemInfo: "\u5C0F\u74F6\u5B50\uFF0C\u8DB3\u4EE5\u88C5\u4E0B150ml\u7684\u6DB2\u4F53"
