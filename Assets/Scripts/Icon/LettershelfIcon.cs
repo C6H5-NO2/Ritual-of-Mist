@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LettershelfUIControl : MonoBehaviour {
+public class LettershelfIcon : MonoBehaviour {
     public GameObject letterPanelUI;
 
     private void Start() {

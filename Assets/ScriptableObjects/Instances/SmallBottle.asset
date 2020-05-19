@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af9d330cddbe3441988313e75d09250, type: 3}
   m_Name: SmallBottle
   m_EditorClassIdentifier: 
-  itemName: Small Bottle
-  itemImage: {fileID: 21300000, guid: 318adef81a2b74a4788f4ee58327b20d, type: 3}
-  itemHeldCount: 0
-  itemInfo: "\u5C0F\u74F6\u5B50\uFF0C\u8DB3\u4EE5\u88C5\u4E0B150ml\u7684\u6DB2\u4F53"
+  name: Small Bottle
+  properties: 02000000030000000000000000000000
+  isExhaust: 0
+  info: "\u5C0F\u74F6\u5B50\uFF0C\u8DB3\u4EE5\u88C5\u4E0B150ml\u7684\u6DB2\u4F53\n\u6D4B\u8BD5\uFF1A\u6DE4\u6CE5\r\u4EBA\u5076"
+  image: {fileID: 21300000, guid: 318adef81a2b74a4788f4ee58327b20d, type: 3}
+  prefab: {fileID: 8136240058228649068, guid: 492cdab94db847d41af6768b57cb4a97, type: 3}

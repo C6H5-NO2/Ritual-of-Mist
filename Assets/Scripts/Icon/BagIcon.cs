@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BagUIControl : MonoBehaviour {
+public class BagIcon : MonoBehaviour {
     public GameObject bagPanelUI;
 
     private void Start() {
@@ -11,8 +11,6 @@ public class BagUIControl : MonoBehaviour {
 
     private void OnMouseDown() {
         if(EventSystem.current.IsPointerOverGameObject()) return;
-
         bagPanelUI.SetActive(true);
-        BagManager.Instance.RefreshBagUI();
     }
 }
