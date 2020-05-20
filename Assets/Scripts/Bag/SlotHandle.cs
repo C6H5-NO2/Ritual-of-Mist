@@ -17,6 +17,7 @@ public class SlotHandle : MonoBehaviour,
     private void Start() {
         itemImg = transform.Find("Image").GetComponent<Image>();
         itemCnt = transform.Find("Count").GetComponent<Text>();
+        // todo: check if null & optimize
         itemImg.sprite = ItemObj.image;
         itemCnt.text = ItemObj.HeldCount.ToString();
     }

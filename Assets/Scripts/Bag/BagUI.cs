@@ -10,6 +10,7 @@ public class BagUI : MonoBehaviour {
 
     private Text itemInfo, itemProperties;
     private Transform gridTrans;
+    private Button takeOutButton;
 
     private SlotHandle focusedSlot;
 
@@ -22,7 +23,7 @@ public class BagUI : MonoBehaviour {
 
     public void UpdateInfoUI() {
         if(!gameObject.activeInHierarchy) return;
-        if(focusedSlot == null) ClearInfoUI();
+        if(focusedSlot is null) ClearInfoUI();
 
         itemInfo.text = focusedSlot.ItemObj.info;
 
@@ -54,14 +55,32 @@ public class BagUI : MonoBehaviour {
         }
     }
 
+    private void OnTakeOutButtonClicked() {
+        if(focusedSlot is null) return;
+        BagManager.Instance.RemoveItem(focusedSlot.ItemObj);
+
+        var randpos = 3 * Random.insideUnitCircle;
+        Instantiate(focusedSlot.ItemObj.prefab, new Vector3(randpos.x, randpos.y), Quaternion.identity);
+        if(focusedSlot.ItemObj.HeldCount == 0) {
+            focusedSlot = null;
+            ClearInfoUI();
+        }
+    }
+
     private void OnEnable() {
         ClearInfoUI();
         RefreshGrid();
+        takeOutButton.onClick.AddListener(OnTakeOutButtonClicked);
+    }
+
+    private void OnDisable() {
+        takeOutButton.onClick.RemoveAllListeners(); // only listen to this
     }
 
     private void Awake() {
         itemInfo = transform.Find("ItemInfo").GetComponent<Text>();
         itemProperties = transform.Find("ItemProperties").GetComponent<Text>();
         gridTrans = transform.Find("Grid");
+        takeOutButton = transform.Find("TakeOut").GetComponent<Button>();
     }
 }
