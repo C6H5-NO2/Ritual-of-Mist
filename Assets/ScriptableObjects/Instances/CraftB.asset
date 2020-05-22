@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af9d330cddbe3441988313e75d09250, type: 3}
+  m_Name: CraftB
+  m_EditorClassIdentifier: 
+  name: Craft B
+  properties: 00000000000000000000000000000000
+  isExhaust: 0
+  info: "\u795E\u79D8\u7684\u7269\u54C1 B\uFF0C\u53EF\u4EE5\u4E0E A \u5408\u6210 C\u3002"
+  image: {fileID: 21300000, guid: 7b04fcf620fef6a4ebdd67a827c15994, type: 3}
+  prefab: {fileID: 4179314718751773366, guid: bd433276912bdfb4f9dfab5f92d5cf56, type: 3}

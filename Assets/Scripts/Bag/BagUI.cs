@@ -59,8 +59,7 @@ public class BagUI : MonoBehaviour {
         if(focusedSlot is null) return;
         BagManager.Instance.RemoveItem(focusedSlot.ItemObj);
 
-        var randpos = 3 * Random.insideUnitCircle;
-        Instantiate(focusedSlot.ItemObj.prefab, new Vector3(randpos.x, randpos.y), Quaternion.identity);
+        Instantiate(focusedSlot.ItemObj.prefab, 2.4f * Random.insideUnitCircle, Quaternion.identity);
         if(focusedSlot.ItemObj.HeldCount == 0) {
             focusedSlot = null;
             ClearInfoUI();
