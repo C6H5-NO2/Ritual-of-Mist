@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CraftButtonDown : MonoBehaviour {
-    public AudioSource audioSource;
     public Sprite[] kuang;
 
     public GameObject[] RawMaterial { get; set; }
@@ -21,6 +19,7 @@ public class CraftButtonDown : MonoBehaviour {
     }
 
     private IEnumerator DoCrafting() {
+        var audioSource = GetComponent<AudioSource>();
         audioSource.Play();
 
         // only one child
@@ -48,6 +47,7 @@ public class CraftButtonDown : MonoBehaviour {
 
         // todo: use shader to glow
         var sr = temp.AddComponent<SpriteRenderer>();
+        sr.sortingLayerID = GetComponentInChildren<SpriteRenderer>().sortingLayerID;
 
         while(audioSource.isPlaying) {
             temp.transform.position = originPos + (Vector3)(Random.insideUnitCircle * wiggleFactor);

@@ -36,7 +36,7 @@ public class BagManager : MonoBehaviour {
     }
 
     private void Awake() {
-        if(Instance) {
+        if(!(Instance is null)) {
             Destroy(this);
             return;
         }

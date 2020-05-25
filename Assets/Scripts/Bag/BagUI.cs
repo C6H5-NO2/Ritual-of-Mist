@@ -13,7 +13,6 @@ public class BagUI : MonoBehaviour {
     private Button takeOutButton;
 
     private SlotHandle focusedSlot;
-
     public SlotHandle FocusedSlot {
         set {
             focusedSlot = value;
