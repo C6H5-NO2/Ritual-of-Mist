@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af9d330cddbe3441988313e75d09250, type: 3}
+  m_Name: BrewA
+  m_EditorClassIdentifier: 
+  name: Brew A
+  properties: 00000000000000000000000000000000
+  isExhaust: 0
+  info: "[\u6D4B\u8BD5\u7528] \u70BC\u836F\u7269\u54C1 A"
+  image: {fileID: 21300000, guid: babd18ebde6a1284b9d57c8c8922ca0a, type: 3}
+  prefab: {fileID: 701069674462772693, guid: 29eb82fbc37910a4cafe9e25216c44dd, type: 3}

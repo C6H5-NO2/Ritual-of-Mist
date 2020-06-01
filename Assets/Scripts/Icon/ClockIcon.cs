@@ -6,33 +6,25 @@ public class ClockIcon : MonoBehaviour {
     private Transform hand;
 
     private SpriteRenderer weather;
-    private int currWeather;
 
-    private void NextWeather() {
-        int idx;
-        do
-            idx = Random.Range(0, weatherIcons.Length);
-        while(idx == currWeather);
-        weather.sprite = weatherIcons[currWeather = idx];
+    private void UpdateWeather() {
+        weather.sprite = weatherIcons[(int)TimeWeatherManager.Instance.DayWeather];
     }
 
     private void Awake() {
         hand = transform.Find("hand");
-
         weather = transform.Find("weather").GetComponent<SpriteRenderer>();
-        currWeather = -1;
     }
 
     private void Update() {
-        //hand.localRotation = Quaternion.Euler(0, 0, Time.deltaTime * -360 / TimeManager.SecPerDay) * hand.localRotation;
-        hand.localRotation = Quaternion.Euler(0, 0, TimeManager.Instance.DayTime * -360);
+        hand.localRotation = Quaternion.Euler(0, 0, TimeWeatherManager.Instance.DayTime * -360);
     }
 
     private void OnEnable() {
-        TimeManager.OnNewDay += NextWeather;
+        TimeWeatherManager.OnNewDay += UpdateWeather;
     }
 
     private void OnDisable() {
-        TimeManager.OnNewDay -= NextWeather;
+        TimeWeatherManager.OnNewDay -= UpdateWeather;
     }
 }
