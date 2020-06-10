@@ -66,7 +66,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2045633793
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cf238f9c8c26b9246a615542e309603e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -89,10 +89,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1363690997897391493}
   - component: {fileID: 5347904942302925780}
-  - component: {fileID: 2193290495412931099}
+  - component: {fileID: 6067419966313912673}
   m_Layer: 0
   m_Name: Brew2
-  m_TagString: Untagged
+  m_TagString: MovableItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
---- !u!114 &2193290495412931099
+--- !u!114 &6067419966313912673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5001486890211212220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e0391c8167a0b428145da05bd69765, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c102e70d75002d41beb2212c09f6d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisItem: {fileID: 11400000, guid: 48593c4b4d1982e4095414d1c3f88faa, type: 2}

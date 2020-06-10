@@ -28,13 +28,15 @@ public class SlotHandle : MonoBehaviour,
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        if(scaleRoutine != null) StopCoroutine(scaleRoutine);
+        if(scaleRoutine != null)
+            StopCoroutine(scaleRoutine);
         scaleRoutine = SmoothScale(1.2f);
         StartCoroutine(scaleRoutine);
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-        if(scaleRoutine != null) StopCoroutine(scaleRoutine);
+        if(scaleRoutine != null)
+            StopCoroutine(scaleRoutine);
         scaleRoutine = SmoothScale(1);
         StartCoroutine(scaleRoutine);
     }
