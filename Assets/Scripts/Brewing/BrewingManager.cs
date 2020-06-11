@@ -30,7 +30,7 @@ public class BrewingManager : MonoBehaviour {
     }
 
     private void Awake() {
-        if(!(Instance is null)) {
+        if(Instance != null) {
             Destroy(this);
             return;
         }
@@ -38,7 +38,5 @@ public class BrewingManager : MonoBehaviour {
         Instance = this;
     }
 
-    private void Start() {
-
-    }
+    private void Start() { }
 }

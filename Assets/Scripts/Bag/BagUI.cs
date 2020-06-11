@@ -21,8 +21,10 @@ public class BagUI : MonoBehaviour {
     }
 
     public void UpdateInfoUI() {
-        if(!gameObject.activeInHierarchy) return;
-        if(focusedSlot is null) ClearInfoUI();
+        if(!gameObject.activeInHierarchy)
+            return;
+        if(focusedSlot == null)
+            ClearInfoUI();
 
         itemInfo.text = focusedSlot.ItemObj.info;
 
@@ -42,7 +44,8 @@ public class BagUI : MonoBehaviour {
 
     // todo: optimize
     public void RefreshGrid() {
-        if(!gameObject.activeInHierarchy) return;
+        if(!gameObject.activeInHierarchy)
+            return;
 
         var gridChildren = new List<GameObject>(from Transform child in gridTrans select child.gameObject);
         gridChildren.ForEach(Destroy);
@@ -55,7 +58,8 @@ public class BagUI : MonoBehaviour {
     }
 
     private void OnTakeOutButtonClicked() {
-        if(focusedSlot is null) return;
+        if(focusedSlot == null)
+            return;
         BagManager.Instance.RemoveItem(focusedSlot.ItemObj);
 
         Instantiate(focusedSlot.ItemObj.prefab, 2.4f * Random.insideUnitCircle, Quaternion.identity);

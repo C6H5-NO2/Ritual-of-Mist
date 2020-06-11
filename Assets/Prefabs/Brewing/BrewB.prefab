@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352144715338011292}
   - component: {fileID: 6174094644013135881}
-  - component: {fileID: 9117412465199780650}
+  - component: {fileID: 5498969365747247000}
   m_Layer: 0
   m_Name: BrewB
   m_TagString: MovableItem
@@ -138,7 +138,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4}
   m_EdgeRadius: 0
---- !u!114 &9117412465199780650
+--- !u!114 &5498969365747247000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3562569115146150491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e0391c8167a0b428145da05bd69765, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c102e70d75002d41beb2212c09f6d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisItem: {fileID: 11400000, guid: 48ff3bf6b206e23498dc191a23993ddc, type: 2}

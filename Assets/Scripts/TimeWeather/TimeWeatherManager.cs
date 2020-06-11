@@ -66,7 +66,7 @@ public class TimeWeatherManager : MonoBehaviour {
     // ******** Event Func ********
 
     private void Awake() {
-        if(!(Instance is null)) {
+        if(Instance != null) {
             Destroy(this);
             return;
         }
