@@ -3,10 +3,11 @@
 public class TimeWeatherManager : MonoBehaviour {
     public static TimeWeatherManager Instance { get; private set; }
 
-    // ******** Time ********
+    // ------- Time -------
 
     public const float SecPerDay = 60;
 
+    /// <summary> Normalized time in range [0, 1) </summary>
     public float DayTime { get; private set; }
 
     private bool pause;
@@ -28,7 +29,7 @@ public class TimeWeatherManager : MonoBehaviour {
 
     private float accumulatedTime, refTimePoint;
 
-    // ******** Weather ********
+    // ------- Weather -------
 
     public enum Weather {
         Foggy,
@@ -39,7 +40,7 @@ public class TimeWeatherManager : MonoBehaviour {
 
     public Weather DayWeather { get; private set; } = Weather.WeatherNum;
 
-    // ******** Day ********
+    // ------- Day -------
 
     public int DayNum { get; private set; }
 
@@ -63,15 +64,13 @@ public class TimeWeatherManager : MonoBehaviour {
         OnNewDay?.Invoke();
     }
 
-    // ******** Event Func ********
+    // ------- Event Func -------
 
     private void Awake() {
-        if(Instance != null) {
+        if(Instance != null)
             Destroy(this);
-            return;
-        }
-
-        Instance = this;
+        else
+            Instance = this;
     }
 
     private void Start() {

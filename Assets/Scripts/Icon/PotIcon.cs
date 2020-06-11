@@ -3,20 +3,15 @@ using UnityEngine.EventSystems;
 
 public class PotIcon : MonoBehaviour {
     public Sprite[] potSprites;
-    public GameObject brewPanelUI;
 
-    private new SpriteRenderer renderer;
+    private SpriteRenderer spr;
 
     private void UpdateSprite(BrewingManager.State state) {
-        renderer.sprite = potSprites[(int)state];
+        spr.sprite = potSprites[(int)state];
     }
 
     private void Awake() {
-        renderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void Start() {
-        brewPanelUI.SetActive(false);
+        spr = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable() {
@@ -30,7 +25,7 @@ public class PotIcon : MonoBehaviour {
     private void OnMouseDown() {
         if(EventSystem.current.IsPointerOverGameObject())
             return;
-        brewPanelUI.SetActive(!brewPanelUI.activeSelf);
+        BrewingManager.Instance.ReactMessage(BrewingManager.Message.PotIconClicked);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -41,11 +36,10 @@ public class PotIcon : MonoBehaviour {
 
         // bug prone: hard coded string
         if(otherItem.name == "Large Bottle") {
-            // todo: minus count???
-            BrewingManager.Instance.FillWater();
-            brewPanelUI.SetActive(true);
+            BrewingManager.Instance.ReactMessage(BrewingManager.Message.FillWater);
+            // todo (?): minus count
+            // todo (?): check if already filled
+            Destroy(otherGobj);
         }
-
-        Destroy(otherGobj);
     }
 }
