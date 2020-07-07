@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Adventure {
-    public class MapManager : SingletonManager<MapManager> {
+    public class MapManager : Utils.SingletonManager<MapManager> {
         public LocationData[] datas;
         public GameObject locSymbolPrefab;
         public RectTransform avaLocs;

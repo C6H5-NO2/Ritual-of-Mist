@@ -43,14 +43,14 @@ TagManager:
   - name: Background
     uniqueID: 2964867107
     locked: 0
-  - name: OnTable
-    uniqueID: 2249333503
-    locked: 0
   - name: Interactive
     uniqueID: 2984314667
     locked: 0
   - name: CustomUI
     uniqueID: 3486887113
+    locked: 0
+  - name: OnTable
+    uniqueID: 2249333503
     locked: 0
   - name: Default
     uniqueID: 0

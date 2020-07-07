@@ -7,6 +7,8 @@ namespace Adventure {
         public Text locName, locText, locCost;
         public Image locImg;
         public Button locConfirm;
+        public GameObject advObjUIPrefab;
+        public Transform targetCanvas;
 
 
         private readonly Color avalible = Color.yellow,
@@ -32,13 +34,15 @@ namespace Adventure {
         private void OnConfirm() {
             if(locCost.color == unavalible)
                 return;
-            Debug.Log("Start Adventure in: " + location.locName);
-            // todo
-            gameObject.SetActive(false);
+            Debug.Log("Start adventure in: " + location.locName);
+            var obj = Instantiate(advObjUIPrefab, targetCanvas, false);
+            obj.GetComponent<AdvPrepUI>().Location = location;
+            // todo: rand pos
+            MapManager.Instance.gameObject.SetActive(false);
         }
 
 
-        private RectTransform selfTrans;
+        private RectTransform rectTrans;
 
         // todo
         private void FitPosition(Vector2 pos) {
@@ -46,9 +50,9 @@ namespace Adventure {
             //var padding = new Vector2(20, 11);
             //var w = Screen.width - padding.x;
             //var h = Screen.height - padding.y;
-            //selfTrans.localPosition = pos;
+            //rectTrans.localPosition = pos;
             //// start from bottom-left, enumerate clockwise
-            //selfTrans.GetWorldCorners(worldCornerBuf);
+            //rectTrans.GetWorldCorners(worldCornerBuf);
             //var min = worldCornerBuf[0];
             //var max = worldCornerBuf[2];
             //if(min.x < padding.x)
@@ -60,14 +64,14 @@ namespace Adventure {
             //else if(max.y > h)
             //    pos.y -= max.y - h;
 
-            //Debug.Log("selfTrans.offsetMin = " + selfTrans.offsetMin);
-            //Debug.Log("selfTrans.offsetMax = " + selfTrans.offsetMax);
-            selfTrans.localPosition = pos;
+            //Debug.Log("rectTrans.offsetMin = " + rectTrans.offsetMin);
+            //Debug.Log("rectTrans.offsetMax = " + rectTrans.offsetMax);
+            rectTrans.localPosition = pos;
         }
 
 
         private void Awake() {
-            selfTrans = transform as RectTransform;
+            rectTrans = transform as RectTransform;
             locConfirm.onClick.AddListener(OnConfirm);
         }
     }
