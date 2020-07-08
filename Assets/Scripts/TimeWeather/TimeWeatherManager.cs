@@ -1,5 +1,20 @@
 ﻿using UnityEngine;
 
+// todo
+public struct TimeWeather {
+    public TimeWeather(float time, TimeWeatherManager.Weather weather) {
+        this.time = time;
+        this.weather = weather;
+    }
+
+    public bool IsDay() => time < .5f;
+    public bool IsNight() => time > .5f;
+
+    public readonly float time;
+    public readonly TimeWeatherManager.Weather weather;
+}
+
+
 public class TimeWeatherManager : MonoBehaviour {
     public static TimeWeatherManager Instance { get; private set; }
 

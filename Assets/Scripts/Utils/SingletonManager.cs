@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Utils {
+namespace ThisGame.Utils {
     public class SingletonManager<T> : MonoBehaviour where T : SingletonManager<T> {
         public static T Instance { get; private set; }
 

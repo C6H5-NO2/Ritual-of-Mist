@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Adventure {
+namespace ThisGame.Adventure {
     public class DefaultDragUI : Utils.DragableUI {
         public Transform DropSlot { private get; set; }
 

@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Adventure {
+namespace ThisGame.Adventure {
     public class MapManager : Utils.SingletonManager<MapManager> {
         public LocationData[] datas;
         public GameObject locSymbolPrefab;
@@ -13,7 +13,7 @@ namespace Adventure {
         private bool preserveLocations;
 
         public void ReceiveSymbolClick(LocationData dat) {
-            Debug.Log(dat.locName);
+            Debug.Log(dat.name);
             locDescUI.gameObject.SetActive(true);
             locDescUI.Location = dat;
         }
@@ -21,7 +21,7 @@ namespace Adventure {
         public void GenAllLoc() {
             foreach(var dat in datas) {
                 var symbol = Instantiate(locSymbolPrefab, avaLocs, false);
-                symbol.transform.localPosition = dat.locSybolPos;
+                symbol.transform.localPosition = dat.locSymbolPos;
                 //                                                      bug prone
                 symbol.GetComponent<Button>().onClick.AddListener(delegate { ReceiveSymbolClick(dat); });
             }

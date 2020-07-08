@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4110973851cfd4583327806abf000e, type: 3}
   m_Name: WitchHouse
   m_EditorClassIdentifier: 
-  locName: "\u5973\u5DEB\u5C0F\u5C4B"
-  locText: "\u6D4B\u8BD5\u7528\u5730\u70B9"
-  locCost: 0
-  locImage: {fileID: 21300012, guid: 5cdb8ce63ba77224582d6e3cdcb64728, type: 3}
-  locSybolPos: {x: -297, y: 0}
+  id: 0
+  nameid: 
+  name: "\u5973\u5DEB\u5C0F\u5C4B"
+  desc: "\u6D4B\u8BD5\u7528\u5730\u70B9"
+  image: {fileID: 21300012, guid: 5cdb8ce63ba77224582d6e3cdcb64728, type: 3}
+  locSymbolPos: {x: -301, y: 0}
+  goldCost: 0
+  timeCost: 0
+  events: []

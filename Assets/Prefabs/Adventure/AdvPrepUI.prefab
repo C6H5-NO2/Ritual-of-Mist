@@ -542,6 +542,7 @@ MonoBehaviour:
   locName: {fileID: 1744160563532987805}
   locImg: {fileID: 1744160564740453336}
   startConfirm: {fileID: 1744160564742660088}
+  itemList: {fileID: 1744160564004224606}
   advPrgUIPrefab: {fileID: 3749263565791199418, guid: d7855826fc271fa4b8a2c3bac45c17f0,
     type: 3}
 --- !u!114 &1422939920802368413

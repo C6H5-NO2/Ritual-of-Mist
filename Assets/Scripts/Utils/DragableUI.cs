@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Utils {
+namespace ThisGame.Utils {
     public class DragableUI : MonoBehaviour,
                               IBeginDragHandler,
                               IDragHandler,

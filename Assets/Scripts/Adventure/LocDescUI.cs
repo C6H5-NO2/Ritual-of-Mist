@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Adventure {
+namespace ThisGame.Adventure {
     public class LocDescUI : MonoBehaviour {
         public Text locName, locText, locCost;
         public Image locImg;
@@ -21,12 +21,12 @@ namespace Adventure {
                 location = value;
                 if(location == null)
                     return;
-                FitPosition(location.locSybolPos);
-                locName.text = location.locName;
-                locText.text = location.locText;
-                locCost.text = location.locCost.ToString();
+                FitPosition(location.locSymbolPos);
+                locName.text = location.name;
+                locText.text = location.desc;
+                locCost.text = location.goldCost.ToString();
                 locCost.color = true ? avalible : unavalible; // todo
-                locImg.sprite = location.locImage;
+                locImg.sprite = location.image;
             }
         }
 
@@ -34,7 +34,7 @@ namespace Adventure {
         private void OnConfirm() {
             if(locCost.color == unavalible)
                 return;
-            Debug.Log("Start adventure in: " + location.locName);
+            Debug.Log("Start adventure in: " + location.name);
             var obj = Instantiate(advObjUIPrefab, targetCanvas, false);
             obj.GetComponent<AdvPrepUI>().Location = location;
             // todo: rand pos
