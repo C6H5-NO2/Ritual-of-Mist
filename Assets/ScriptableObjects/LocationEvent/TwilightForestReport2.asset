@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e13821bd84e7946b86aa67feca7e3d, type: 3}
-  m_Name: TwilightForestSpice
+  m_Script: {fileID: 11500000, guid: 0079309ef53f63644a47a462a1334505, type: 3}
+  m_Name: TwilightForestReport2
   m_EditorClassIdentifier: 
   id: 0
   nameid: 
-  name: "\u9999\u8349\u6811"
-  desc: "\u9999\u8349\u6811\u4E8B\u4EF6"
+  name: "\u7814\u7A76\u62A5\u544A 2"
+  desc: "\u7814\u7A76\u62A5\u544A 2"
   image: {fileID: 0}
   loot:
-  - {fileID: 11400000, guid: 60da4c0284c7ff745bbae545ec218ba8, type: 2}
-  - {fileID: 11400000, guid: cf3bc6c691b6607409d4d9cf0693b2a3, type: 2}
+  - {fileID: 11400000, guid: 2403d43986ced104abaa3074f2900eb4, type: 2}
+  location: {fileID: 11400000, guid: 28d79e0d9d408f843b50b1c04feafa41, type: 2}

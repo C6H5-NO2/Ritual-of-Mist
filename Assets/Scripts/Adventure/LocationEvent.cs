@@ -1,13 +1,17 @@
 ﻿using System.Collections.Generic;
+using ThisGame.Items;
 using UnityEngine;
 
 namespace ThisGame.Adventure {
-    [CreateAssetMenu(fileName = "LocationEvent", menuName = "Location/Event/LocationEvent")]
+    [CreateAssetMenu(fileName = "PlaceHolderEvent", menuName = "Adventure/Event/Place Holder Event")]
     public class LocationEvent : Utils.IdScriptableObject {
-        //public LocationData location;
-        public Utils.ItemWithCount[] loot;
+        public ItemDescription[] loot;
 
-        public virtual bool IsSuccess(List<Items.ItemDescription> along, TimeWeather dtw) {
+        // todo: split data & logic
+        ///// <param name="count"># of each loot if return true. Otherwise temp value. Modified in the function.</param>
+        public virtual bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
+            for(var i = count.Length - 1; i >= 0; --i)
+                count[i] = 0;
             return false;
         }
     }

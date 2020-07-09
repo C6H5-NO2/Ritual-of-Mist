@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,33 +9,59 @@ namespace ThisGame.Adventure {
         public Text locName;
         public Image locImg;
         public Slider prgSlider;
-        public GameObject advFinUIPrefab;
+        public Button finBut;
 
+
+        private bool started;
         private LocationData location;
 
+        public void StartAdv(LocationData data,
+                             Dictionary<Items.ItemDescription, uint> items,
+                             TimeWeather timeweather) {
+            if(started)
+                return;
+            started = true;
 
-        public void StartAdv(LocationData data, List<Items.ItemDescription> items) {
             location = data;
             locName.text = location.name;
             locImg.sprite = location.image;
-
-            // todo: time & weather
-            var tw = new TimeWeather(TimeWeatherManager.Instance.DayTime,
-                                     TimeWeatherManager.Instance.DayWeather);
+            location.Visit();
 
             StartCoroutine(CountDown());
 
-            // todo: consider using coro
-            // todo: decide events
+            // todo: consider using co-routine / multi-thread
+            var (states, loots) = location.ProcessEvents(items, timeweather);
+            this.loots = loots;
+            if(states is null || loots is null) {
+                events = null;
+                return;
+            }
+            events = new List<LocationEvent>(location.events.Length);
+            foreach(var ev in location.events) {
+                if(states[ev])
+                    events.Add(ev);
+            }
         }
 
 
+        private List<LocationEvent> events;
+        private Dictionary<Items.ItemDescription, uint> loots;
+
         private void OnAdvFin() {
-            var obj = Instantiate(advFinUIPrefab, transform.root, false);
-            obj.transform.localPosition = transform.localPosition;
-            var scrp = obj.GetComponent<AdvFinUI>();
-            // todo: pass items and states
             Destroy(gameObject);
+            if(events is null || loots is null)
+                return;
+
+            // todo: pass param
+            Debug.Log("Adv in: " + location.name + " time " + location.VisitTimes);
+            var sb = new StringBuilder("Events:\n");
+            foreach(var ev in events)
+                sb.AppendLine(ev.name);
+            Debug.Log(sb);
+            sb = new StringBuilder("Loots:\n");
+            foreach(var lt in loots)
+                sb.AppendLine(lt.Key.name + ": " + lt.Value);
+            Debug.Log(sb);
         }
 
 
@@ -47,7 +74,16 @@ namespace ThisGame.Adventure {
                 timePast += Time.deltaTime; // todo: use custom time manager (?)
                 yield return null;
             }
-            OnAdvFin();
+            prgSlider.gameObject.SetActive(false);
+            finBut.gameObject.SetActive(true);
+        }
+
+
+        private void Awake() {
+            prgSlider.value = 0;
+            prgSlider.gameObject.SetActive(true);
+            finBut.onClick.AddListener(OnAdvFin);
+            finBut.gameObject.SetActive(false);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ThisGame.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,16 +27,20 @@ namespace ThisGame.Adventure {
             var obj = Instantiate(advPrgUIPrefab, transform.root, false);
             obj.transform.localPosition = transform.localPosition;
 
-            var items = new List<Items.ItemDescription>();
+            var items = new Dictionary<Items.ItemDescription, uint>();
             foreach(Transform item in itemList) {
                 var holder = item.GetComponent<Items.ItemDescHolder>();
-                if(holder == null)
-                    continue;
-                items.Add(holder.Description);
+                // should not be null
+                //if(holder == null)
+                //    continue;
+                items.EaddNset(holder.Description, 1);
             }
 
             var scrp = obj.GetComponent<AdvPrgUI>();
-            scrp.StartAdv(location, items);
+            scrp.StartAdv(location,
+                          items,
+                          new TimeWeather(TimeWeatherManager.Instance.DayTime,
+                                          TimeWeatherManager.Instance.DayWeather));
             Destroy(gameObject);
         }
 

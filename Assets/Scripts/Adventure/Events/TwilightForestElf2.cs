@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ThisGame.Items;
 using UnityEngine;
 
 namespace ThisGame.Adventure.Events {
-    [CreateAssetMenu(fileName = "TwilightForestElf2", menuName = "Location/Event/TwilightForestElf2")]
+    [CreateAssetMenu(fileName = "TwilightForestElf2", menuName = "Adventure/Event/TwilightForestElf2")]
     public class TwilightForestElf2 : LocationEvent {
-        public override bool IsSuccess(List<Items.ItemDescription> along, TimeWeather dtw) {
+        public override bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
             //                   todo: use id
-            if(along.All(item => item.nameid != "potion_water_elf"))
+            if(along.All(kvp => kvp.Key.nameid != "potion_water_elf"))
                 return false;
-            loot[0].Count = 1;
+            count[0] = 1;
             return true;
         }
     }
