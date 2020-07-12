@@ -7,10 +7,10 @@ namespace ThisGame.Adventure.Events {
     public class TwilightForestReport1 : LocationEvent {
         public LocationData location;
 
-        public override bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
+        public override bool IsSuccess(Dictionary<ItemDescription, int> along, TimeWeather dtw, int[] count) {
             var ret = location.VisitTimes == 1;
-            count[0] = ret ? 1u : 0u;
-            count[1] = ret ? 1u : 0u;
+            count[0] = ret ? 1 : 0;
+            count[1] = ret ? 1 : 0;
             return ret;
         }
     }

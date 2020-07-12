@@ -19,7 +19,7 @@ namespace ThisGame.Adventure {
         }
 
         // todo: split data & logic
-        public abstract (Dictionary<LocationEvent, bool> states, Dictionary<Items.ItemDescription, uint> loots)
-            ProcessEvents(Dictionary<Items.ItemDescription, uint> items, TimeWeather timeweather);
+        public abstract (Dictionary<LocationEvent, bool> states, Dictionary<Items.ItemDescription, int> loots)
+            ProcessEvents(Dictionary<Items.ItemDescription, int> items, TimeWeather timeweather);
     }
 }

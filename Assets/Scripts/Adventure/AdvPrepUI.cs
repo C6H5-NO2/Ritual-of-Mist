@@ -24,10 +24,10 @@ namespace ThisGame.Adventure {
 
 
         private void StartAdventure() {
-            var obj = Instantiate(advPrgUIPrefab, transform.root, false);
+            var obj = Instantiate(advPrgUIPrefab, InSceneObjRef.Instance.CameraUI, false);
             obj.transform.localPosition = transform.localPosition;
 
-            var items = new Dictionary<Items.ItemDescription, uint>();
+            var items = new Dictionary<Items.ItemDescription, int>();
             foreach(Transform item in itemList) {
                 var holder = item.GetComponent<Items.ItemDescHolder>();
                 // should not be null

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: mushroom_glow
   name: "\u53D1\u5149\u8611\u83C7"
-  desc: 
+  desc: "\u53D1\u5149\u8611\u83C7"
   image: {fileID: 21300006, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

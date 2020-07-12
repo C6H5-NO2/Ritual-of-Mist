@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: acorn
   name: "\u6A61\u5B50"
-  desc: "art asset \u91CC\u53EB\u300C\u5DE8\u6728\u679C\u300D"
+  desc: "\u6A61\u5B50\nart asset \u91CC\u53EB\u300C\u5DE8\u6728\u679C\u300D"
   image: {fileID: 21300016, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

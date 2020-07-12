@@ -9,7 +9,7 @@ namespace ThisGame.Adventure {
 
         // todo: split data & logic
         ///// <param name="count"># of each loot if return true. Otherwise temp value. Modified in the function.</param>
-        public virtual bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
+        public virtual bool IsSuccess(Dictionary<ItemDescription, int> along, TimeWeather dtw, int[] count) {
             for(var i = count.Length - 1; i >= 0; --i)
                 count[i] = 0;
             return false;

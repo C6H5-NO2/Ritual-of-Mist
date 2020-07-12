@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: knife_lv3
   name: "\u4E09\u7EA7\u5200"
-  desc: 
+  desc: "\u4E09\u7EA7\u5200"
   image: {fileID: 21300050, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 03000000
   isExhaust: 0

@@ -8,7 +8,6 @@ namespace ThisGame.Adventure {
         public Image locImg;
         public Button locConfirm;
         public GameObject advObjUIPrefab;
-        public Transform targetCanvas;
 
 
         private readonly Color avalible = Color.yellow,
@@ -35,7 +34,7 @@ namespace ThisGame.Adventure {
             if(locCost.color == unavalible)
                 return;
             Debug.Log("Start adventure in: " + location.name);
-            var obj = Instantiate(advObjUIPrefab, targetCanvas, false);
+            var obj = Instantiate(advObjUIPrefab, Utils.InSceneObjRef.Instance.CameraUI, false);
             obj.GetComponent<AdvPrepUI>().Location = location;
             // todo: rand pos
             MapManager.Instance.gameObject.SetActive(false);

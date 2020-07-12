@@ -214,6 +214,8 @@ MonoBehaviour:
   locImg: {fileID: 7881375823591256826}
   prgSlider: {fileID: 1800152043564708156}
   finBut: {fileID: 4879702442577294493}
+  advFinUIPrefab: {fileID: 8145887320924031306, guid: d89c7ea9b118ad34faf65d607dfbaca0,
+    type: 3}
 --- !u!114 &5642816729446377269
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   nameid: 
   name: "\u9999\u8349\u6811"
   desc: "\u9999\u8349\u6811\u4E8B\u4EF6"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: cba68b13ecc41b24abfe2ecdece31870, type: 3}
   loot:
   - {fileID: 11400000, guid: 60da4c0284c7ff745bbae545ec218ba8, type: 2}
   - {fileID: 11400000, guid: cf3bc6c691b6607409d4d9cf0693b2a3, type: 2}

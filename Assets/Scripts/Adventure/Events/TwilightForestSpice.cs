@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ThisGame.Adventure.Events {
     [CreateAssetMenu(fileName = "TwilightForestSpice", menuName = "Adventure/Event/TwilightForestSpice")]
     public class TwilightForestSpice : LocationEvent {
-        public override bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
+        public override bool IsSuccess(Dictionary<ItemDescription, int> along, TimeWeather dtw, int[] count) {
             const float sucProb = .5f;
             if(Random.Range(.0f, 1) < sucProb)
                 return false;

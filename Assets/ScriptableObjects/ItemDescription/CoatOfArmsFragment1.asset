@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: coat_of_arms_fragment_1
   name: "\u7EB9\u7AE0\u788E\u7247\u53F3"
-  desc: 
+  desc: "\u7EB9\u7AE0\u788E\u7247\u53F3"
   image: {fileID: 21300064, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00010000
   isExhaust: 0

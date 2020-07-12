@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ThisGame.Adventure.Events {
     [CreateAssetMenu(fileName = "TwilightForestMushroom", menuName = "Adventure/Event/TwilightForestMushroom")]
     public class TwilightForestMushroom : LocationEvent {
-        public override bool IsSuccess(Dictionary<ItemDescription, uint> along, TimeWeather dtw, uint[] count) {
+        public override bool IsSuccess(Dictionary<ItemDescription, int> along, TimeWeather dtw, int[] count) {
             if(dtw.weather != TimeWeatherManager.Weather.Rainy)
                 return false;
             const int totalCount = 3;

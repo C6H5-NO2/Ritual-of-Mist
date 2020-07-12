@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: branch_hard
   name: "\u575A\u786C\u6728\u679D"
-  desc: 
+  desc: "\u575A\u786C\u6728\u679D"
   image: {fileID: 21300014, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

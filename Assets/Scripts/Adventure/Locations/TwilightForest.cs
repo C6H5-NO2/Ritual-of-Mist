@@ -6,17 +6,17 @@ using UnityEngine;
 namespace ThisGame.Adventure {
     [CreateAssetMenu(fileName = "TwilightForest", menuName = "Adventure/Location/Twilight Forest")]
     public class TwilightForest : LocationData {
-        public override (Dictionary<LocationEvent, bool> states, Dictionary<Items.ItemDescription, uint> loots)
-            ProcessEvents(Dictionary<Items.ItemDescription, uint> items, TimeWeather timeweather) {
+        public override (Dictionary<LocationEvent, bool> states, Dictionary<Items.ItemDescription, int> loots)
+            ProcessEvents(Dictionary<Items.ItemDescription, int> items, TimeWeather timeweather) {
             var states = new Dictionary<LocationEvent, bool>(events.Length);
-            var loots = new Dictionary<Items.ItemDescription, uint>();
+            var loots = new Dictionary<Items.ItemDescription, int>();
             var lootLen = int.MinValue;
             foreach(var locationEvent in events) {
                 states.Add(locationEvent, false);
                 if(lootLen < locationEvent.loot.Length)
                     lootLen = locationEvent.loot.Length;
             }
-            var count = new uint[lootLen];
+            var count = new int[lootLen];
 
             // todo: decouple into logic blocks => tile-matching in Editor
             // todo: assert with id

@@ -10,13 +10,13 @@ namespace ThisGame.Adventure {
         public Image locImg;
         public Slider prgSlider;
         public Button finBut;
-
+        public GameObject advFinUIPrefab;
 
         private bool started;
         private LocationData location;
 
         public void StartAdv(LocationData data,
-                             Dictionary<Items.ItemDescription, uint> items,
+                             Dictionary<Items.ItemDescription, int> items,
                              TimeWeather timeweather) {
             if(started)
                 return;
@@ -32,7 +32,7 @@ namespace ThisGame.Adventure {
             // todo: consider using co-routine / multi-thread
             var (states, loots) = location.ProcessEvents(items, timeweather);
             this.loots = loots;
-            if(states is null || loots is null) {
+            if(states is null) {
                 events = null;
                 return;
             }
@@ -45,23 +45,16 @@ namespace ThisGame.Adventure {
 
 
         private List<LocationEvent> events;
-        private Dictionary<Items.ItemDescription, uint> loots;
+        private Dictionary<Items.ItemDescription, int> loots;
 
         private void OnAdvFin() {
             Destroy(gameObject);
-            if(events is null || loots is null)
+            if(events is null)
                 return;
 
-            // todo: pass param
-            Debug.Log("Adv in: " + location.name + " time " + location.VisitTimes);
-            var sb = new StringBuilder("Events:\n");
-            foreach(var ev in events)
-                sb.AppendLine(ev.name);
-            Debug.Log(sb);
-            sb = new StringBuilder("Loots:\n");
-            foreach(var lt in loots)
-                sb.AppendLine(lt.Key.name + ": " + lt.Value);
-            Debug.Log(sb);
+            var canvas = Utils.InSceneObjRef.Instance.OverlayUI;
+            var scrp = Instantiate(advFinUIPrefab, canvas, false).GetComponent<AdvFinUI>();
+            scrp.SetEventsAndLoots(events, loots);
         }
 
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   nameid: spice_2
   name: "\u9999\u6599 2"
-  desc: 
+  desc: "\u9999\u6599 2"
   image: {fileID: 21300070, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0
