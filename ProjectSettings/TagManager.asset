@@ -6,7 +6,7 @@ TagManager:
   tags:
   - MovableItem
   - BrewSlot
-  - OverlayUICanvas
+  - DragItem
   layers:
   - Default
   - TransparentFX

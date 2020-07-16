@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e4477561ce8fa4f8e238dbf815288b, type: 3}
   m_Name: DefaultBagStorage
   m_EditorClassIdentifier: 
-  itemList: []
+  gold: 0

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ThisGame.Adventure {
@@ -24,7 +23,7 @@ namespace ThisGame.Adventure {
                 locName.text = location.name;
                 locText.text = location.desc;
                 locCost.text = location.goldCost.ToString();
-                locCost.color = true ? avalible : unavalible; // todo
+                locCost.color = Bag.BagManager.Instance.Gold >= location.goldCost ? avalible : unavalible;
                 locImg.sprite = location.image;
             }
         }
@@ -34,9 +33,13 @@ namespace ThisGame.Adventure {
             if(locCost.color == unavalible)
                 return;
             Debug.Log("Start adventure in: " + location.name);
+            Bag.BagManager.Instance.Gold -= location.goldCost;
+
             var obj = Instantiate(advObjUIPrefab, Utils.InSceneObjRef.Instance.CameraUI, false);
+            Utils.UiltFunc.RandPosDelta(obj.transform, 150, 100);
             obj.GetComponent<AdvPrepUI>().Location = location;
-            // todo: rand pos
+
+            //transform.root.gameObject.SetActive(false);
             MapManager.Instance.gameObject.SetActive(false);
         }
 

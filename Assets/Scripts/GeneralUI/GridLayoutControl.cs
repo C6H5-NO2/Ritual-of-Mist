@@ -26,6 +26,12 @@ namespace ThisGame.GeneralUI {
             ctrl.ItemCount = count;
         }
 
+        public void Clear() {
+            foreach(Transform slot in gridLayout)
+                Destroy(slot.gameObject);
+            ClickedItem = null;
+        }
+
         public void RemoveClickedItem() {
             if(HasClickedItem)
                 Destroy(ClickedItem.gameObject);

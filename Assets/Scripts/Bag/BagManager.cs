@@ -1,44 +1,42 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using ThisGame.Items;
+using ThisGame.Utils;
 
-/// <remarks> add to GameManager </remarks>
-public class BagManager : MonoBehaviour {
-    public BagStorage bagStorage;
-    public BagUI bagUI;
+namespace ThisGame.Bag {
+    public class BagManager : SingletonManager<BagManager> {
+        public BagStorage bagStorage;
 
-    public static BagManager Instance { get; private set; }
+        // todo: write back
+        private Dictionary<ItemDescription, int> inBag;
+        public Dictionary<ItemDescription, int> InBag {
+            get => inBag;
+            set {
+                inBag = value;
+                // todo: add callback
+            }
+        }
 
-    //public bool IsDirty { get; private set; }
 
-    public void AddItem(ItemObject itemObject, int num = 1) {
-        if(itemObject.HeldCount == 0)
-            bagStorage.itemList.Add(itemObject);
-        itemObject.HeldCount += num;
-        //IsDirty = true;
-        bagUI.RefreshGrid();
-    }
+        private int gold;
+        public int Gold {
+            get => gold;
+            set {
+                gold = value;
+                // todo: add callback
+            }
+        }
 
-    public void RemoveItem(ItemObject itemObject, int num = 1) {
-        if(itemObject.HeldCount < num)
-            return;
-        itemObject.HeldCount -= num;
-        if(itemObject.HeldCount == 0)
-            bagStorage.itemList.Remove(itemObject);
-        //IsDirty = true;
-        bagUI.RefreshGrid();
-    }
 
-    [ContextMenu("Clear items in bag")]
-    public void ClearAll() {
-        bagStorage.itemList.ForEach(item => item.HeldCount = 0);
-        bagStorage.itemList.Clear();
-        //IsDirty = true;
-        bagUI.RefreshGrid();
-    }
-
-    private void Awake() {
-        if(Instance != null)
-            Destroy(this);
-        else
-            Instance = this;
+        protected override void Awake() {
+            base.Awake();
+            if(bagStorage == null) {
+                inBag = new Dictionary<ItemDescription, int>();
+                gold = 500; //0;
+            }
+            else {
+                inBag = bagStorage.inBag;
+                gold = bagStorage.gold;
+            }
+        }
     }
 }

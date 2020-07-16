@@ -4,8 +4,8 @@ namespace ThisGame.Items {
     public enum ItemProperty : byte {
         Metal,
         Spirit,
-        Unnamed1,
-        Unnamed2,
+        Energy,
+        Food,
         Count
     }
 
@@ -14,6 +14,7 @@ namespace ThisGame.Items {
     public class ItemDescription : Utils.IdScriptableObject {
         public byte[] properties = new byte[(int)ItemProperty.Count];
         public bool isExhaust;
+        public int sellPrice;
         public GameObject prefabTemplate;
 
 

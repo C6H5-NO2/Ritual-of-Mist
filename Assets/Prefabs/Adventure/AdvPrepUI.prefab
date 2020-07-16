@@ -164,9 +164,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1744160564004224606}
   - component: {fileID: 1744160564004224605}
-  - component: {fileID: 1744160564004224604}
   - component: {fileID: 1744160564004224594}
   - component: {fileID: 1744160564004224595}
+  - component: {fileID: 4677601677876772365}
   m_Layer: 5
   m_Name: ItemList
   m_TagString: Untagged
@@ -216,18 +216,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
---- !u!114 &1744160564004224604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744160564004224607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604d3b371c9d65c48a5a2a1040c241ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1744160564004224594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -263,6 +251,18 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4677601677876772365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744160564004224607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6429c39d4ce1d1741bec419767e69e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1744160564740453338
 GameObject:
   m_ObjectHideFlags: 0
