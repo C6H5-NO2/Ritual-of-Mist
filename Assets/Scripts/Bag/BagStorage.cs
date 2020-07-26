@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace ThisGame.Bag {
-    [CreateAssetMenu(fileName = "DefaultBagStorage", menuName = "Items (new)/Bag Storage")]
+    [CreateAssetMenu(fileName = "DefaultBagStorage", menuName = "Items/Bag Storage")]
     public class BagStorage : ScriptableObject {
         // todo: write to file
         [SerializeField] public Dictionary<Items.ItemDescription, int> inBag;

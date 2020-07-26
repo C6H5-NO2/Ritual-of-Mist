@@ -73,7 +73,7 @@ namespace ThisGame.Bag {
         private void PushItems() {
             foreach(var item in toScene) {
                 for(var i = 0; i < item.Value; ++i) {
-                    var go = item.Key.Instantiate(InSceneObjRef.Instance.CameraItems);
+                    var go = item.Key.Instantiate(InSceneObjRef.Instance.OnTable);
                     UiltFunc.RandPosDelta(go.transform, 250, 200);
                 }
             }
@@ -108,6 +108,7 @@ namespace ThisGame.Bag {
 
 
         private void OnEnable() {
+            TimeManager.Instance.Pause = true;
             gridLayout.OnClickedItemChanged = UpdateText;
             closeBtn.onClick.AddListener(OnCloseBtnClicked);
             toSceneBtn.onClick.AddListener(OnToSceneBtnClicked);
@@ -122,6 +123,8 @@ namespace ThisGame.Bag {
             gridLayout.OnClickedItemChanged = null;
             closeBtn.onClick.RemoveAllListeners();
             toSceneBtn.onClick.RemoveAllListeners();
+
+            TimeManager.Instance.Pause = false;
         }
     }
 }

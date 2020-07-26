@@ -825,7 +825,7 @@ PrefabInstance:
     - target: {fileID: 3957388295614499150, guid: d932f11ecbeb52d4bb33f30e920d7ba8,
         type: 3}
       propertyPath: m_Name
-      value: ClickClose
+      value: BlackBG
       objectReference: {fileID: 0}
     - target: {fileID: 6796550602439003519, guid: d932f11ecbeb52d4bb33f30e920d7ba8,
         type: 3}

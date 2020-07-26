@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MovableItem
-  - BrewSlot
   - DragItem
   layers:
   - Default
@@ -16,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - CraftContactPoint
+  - 
   - 
   - 
   - 
@@ -44,14 +42,14 @@ TagManager:
   - name: Background
     uniqueID: 2964867107
     locked: 0
-  - name: Interactive
-    uniqueID: 2984314667
-    locked: 0
   - name: CustomUI
     uniqueID: 3486887113
     locked: 0
   - name: OnTable
     uniqueID: 2249333503
+    locked: 0
+  - name: Focus
+    uniqueID: 2984314667
     locked: 0
   - name: Default
     uniqueID: 0

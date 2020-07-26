@@ -10,7 +10,7 @@ namespace ThisGame.Items {
     }
 
 
-    [CreateAssetMenu(fileName = "Item", menuName = "Items (new)/Item Description")]
+    [CreateAssetMenu(fileName = "Item", menuName = "Items/Item Description")]
     public class ItemDescription : Utils.IdScriptableObject {
         public byte[] properties = new byte[(int)ItemProperty.Count];
         public bool isExhaust;
