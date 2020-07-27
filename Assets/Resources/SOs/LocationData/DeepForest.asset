@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6b0ed2bef44e499c70c8635b5e5ef, type: 3}
+  m_Name: DeepForest
+  m_EditorClassIdentifier: 
+  id: 7
+  nameid: deep_forest
+  name: "\u6DF1\u6797"
+  desc: "\u6DF1\u6797\uFF0C\u8302\u5BC6\u7684\u85E4\u66FC\u60AC\u6302\u7F20\u7ED5\u5728\u9AD8\u5927\u7684\u6811\u6728\u4E4B\u4E0A\uFF0C\u5357\u8FB9\u7684\u96FE\u6C14\u4E00\u6B21\u6B21\u4FB5\u88AD\u7740\u68EE\u6797\u6DF1\u5904\uFF0C\u81F4\u4F7F\u8FD9\u91CC\u7684\u6811\u6728\u957F\u52BF\u60CA\u4EBA\uFF0C\u5728\u5C42\u53E0\u4EA4\u9519\u4E4B\u4E2D\uFF0C\u4EFF\u4F5B\u4E00\u9053\u5BC6\u4E0D\u900F\u98CE\u7684\u56F4\u5899\uFF0C\u6BCF\u5F53\u96FE\u6F6E\u6765\u88AD\uFF0C\u8FD9\u91CC\u7684\u96FE\u6C14\u6D53\u5EA6\u603B\u662F\u5F88\u9AD8\u3002"
+  image: {fileID: 21300016, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}
+  locSymbolPos: {x: -76, y: 129}
+  goldCost: 100
+  timeCost: 20
+  uibgs:
+  - {fileID: 21300022, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  - {fileID: 21300054, guid: e30e3c8d46aa9154c9549fbf3efd9023, type: 3}
+  - {fileID: 21300024, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  events:
+  - {fileID: 11400000, guid: 1e0c7635db2f6d54c8209d149610195b, type: 2}
+  - {fileID: 11400000, guid: d4673335ec4572e4ebb945af7e563895, type: 2}
+  - {fileID: 11400000, guid: cc84e004045bd904c86883420bbc8dee, type: 2}
+  - {fileID: 11400000, guid: bbee59bc7bc836c42be09ad97c5e7980, type: 2}
+  - {fileID: 11400000, guid: 7178e95993f7dab40b2b9ddefdcb679b, type: 2}
+  - {fileID: 11400000, guid: f1400a7a741282f44a1e1c06a69bf533, type: 2}
+  - {fileID: 11400000, guid: cee96feaefc5e614a9d42a65381b383c, type: 2}
+  - {fileID: 11400000, guid: c9d7682abe5b5c740909eb7b9cd955e2, type: 2}
+  - {fileID: 11400000, guid: 67c99242452b16244ad648d468440106, type: 2}

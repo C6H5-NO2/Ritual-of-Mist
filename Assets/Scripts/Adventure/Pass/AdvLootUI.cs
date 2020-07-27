@@ -5,7 +5,7 @@ using ThisGame.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThisGame.NewAdv {
+namespace ThisGame.Adventure {
     public class AdvLootUI : MonoBehaviour {
         public Text descText;
         public Button allBagBtn, toSceneBtn;
@@ -77,7 +77,13 @@ namespace ThisGame.NewAdv {
 
 
         private void UpdateDescText(GridItemControl item) {
-            descText.text = gridLayout.HasClickedItem ? item.ItemDesc.desc : "";
+            if(gridLayout.HasClickedItem) {
+                var desc = item.ItemDesc;
+                // todo: format description
+                descText.text = $"{desc.name}：\n{desc.desc}";
+            }
+            else
+                descText.text = "";
         }
 
 

@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using ThisGame.NewAdv;
+using ThisGame.Adventure;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +25,7 @@ namespace ThisGame.Picbook {
             rightBtn.interactable = idx < activeEvents.Length - 1;
             focusEvent = idx;
         }
+
 
         private void OnClickedItemChanged(LocationData loc) {
             if(loc == null || loc.events is null || loc.events.Length == 0) {
@@ -58,6 +59,7 @@ namespace ThisGame.Picbook {
 
         private void OnEnable() {
             Utils.TimeManager.Instance.Pause = true;
+            labelList.Clear();
             foreach(var location in LocDatDict.Instance.Dict)
                 if(location.Available)
                     labelList.Add(location);
@@ -65,7 +67,6 @@ namespace ThisGame.Picbook {
         }
 
         private void OnDisable() {
-            labelList.Clear();
             Utils.TimeManager.Instance.Pause = false;
         }
 

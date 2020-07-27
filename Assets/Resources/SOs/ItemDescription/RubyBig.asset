@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c46afd51c602de4bb708349762ba6b6, type: 3}
+  m_Name: RubyBig
+  m_EditorClassIdentifier: 
+  id: 38
+  nameid: ruby_big
+  name: "\u5927\u5757\u7EA2\u6C34\u6676"
+  desc: "\u867D\u7136\u5BCC\u542B\u80FD\u91CF\uFF0C\u4F46\u56E0\u592A\u8FC7\u79BB\u6563\uFF0C\u5E76\u4E0D\u9002\u5408\u76F4\u63A5\u8FD0\u7528\u3002"
+  image: {fileID: 21300000, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
+  properties: 00000000
+  isExhaust: 0
+  sellPrice: 100
+  prefabTemplate: {fileID: 3387020282410114970, guid: 5d28af87ab548234a8f7b9fd79204fb0,
+    type: 3}

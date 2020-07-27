@@ -3,7 +3,7 @@ using ThisGame.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThisGame.NewAdv {
+namespace ThisGame.Adventure {
     public class AdvFinUI : MonoBehaviour {
         public Text evDesc;
         public Image evImg, locBG;

@@ -7,5 +7,8 @@ namespace ThisGame.Utils {
             var y = Random.Range(-yFactor, yFactor);
             trans.localPosition += new Vector3(x, y, 0);
         }
+
+
+        public static bool GameEnded() => Adventure.EvDatDict.Instance.Dict["ruin_fin"].TriggeredTimes > 0;
     }
 }

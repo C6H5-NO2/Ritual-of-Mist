@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: Failed
+  m_EditorClassIdentifier: 
+  id: 15
+  nameid: witchhouse_failed
+  name: "\u8FDB\u5165\u5931\u8D25"
+  desc: "\u4E25\u5BC6\u7684\u679D\u53F6\u6321\u4F4F\u4E86\u9633\u5149\uFF0C\u6216\u662F\u7531\u4E8E\u5929\u6C14\u72B6\u51B5\u81F4\u4F7F\u9633\u5149\u672C\u8EAB\u5E76\u4E0D\u5145\u8DB3\u3002\u60F3\u8981\u8BA9\u8E0F\u5165\u5176\u4ED6\u7A7A\u95F4\uFF0C\u9700\u8981\u505A\u597D\u5B8C\u5168\u7684\u51C6\u5907\u3002\u5C31\u8FD9\u6837\u53EA\u8EAB\u524D\u5F80\uFF0C\u65E0\u5F02\u4E8E\u5C06\u81EA\u5DF1\u7684\u751F\u547D\u7F6E\u4E8E\u5371\u9669\u4E4B\u5730\u3002"
+  image: {fileID: 21300014, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThisGame.NewAdv {
+namespace ThisGame.Adventure {
     public class LocDescUI : MonoBehaviour {
         public Text locName, locDesc, locCost;
         public Image locImage;
@@ -31,7 +31,21 @@ namespace ThisGame.NewAdv {
         }
 
         private void FitPosition(Vector2 locPos) {
-            // todo:
+            Vector2 initDelta = new Vector2(270, -120),
+                    padding = new Vector2(20, 12),
+                    //canvasHalfsize = transform.root.GetComponent<CanvasScaler>().referenceResolution / 2
+                    canvasHalfsize = new Vector2(1920, 1080) / 2,
+                    //uiHalfSize = ((RectTransform)transform).sizeDelta / 2
+                    uiHalfSize = new Vector2(460, 854) / 2;
+
+            locPos += initDelta;
+            var max = canvasHalfsize - padding - uiHalfSize;
+            if(locPos.x > max.x)
+                // assert left fit
+                locPos.x -= initDelta.x + initDelta.x;
+
+            locPos.y = Mathf.Clamp(locPos.y, -max.y, max.y);
+
             ((RectTransform)transform).anchoredPosition = locPos;
         }
 

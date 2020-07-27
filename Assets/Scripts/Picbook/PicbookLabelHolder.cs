@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using ThisGame.NewAdv;
+using ThisGame.Adventure;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,8 +15,8 @@ namespace ThisGame.Picbook {
         public static readonly Vector2 UnfocusPos = new Vector2(43, 0);
 
         public PicbookLabelList ParentList { get; set; }
+        public bool IsClicked { private get; set; }
         public LocationData Location { get; set; }
-
 
         public void OnPointerClick(PointerEventData eventData) {
             ParentList.ClickedLabel = this;
@@ -25,18 +25,30 @@ namespace ThisGame.Picbook {
 
         private IEnumerator moveRoutine;
 
-        public void OnPointerEnter(PointerEventData eventData) {
+        public void SmoothMoveLeft() {
             if(!(moveRoutine is null))
                 StopCoroutine(moveRoutine);
             moveRoutine = SmoothMove(Vector2.zero);
             StartCoroutine(moveRoutine);
         }
 
-        public void OnPointerExit(PointerEventData eventData) {
+        public void SmoothMoveRight() {
             if(!(moveRoutine is null))
                 StopCoroutine(moveRoutine);
             moveRoutine = SmoothMove(UnfocusPos);
             StartCoroutine(moveRoutine);
+        }
+
+        public void OnPointerEnter(PointerEventData eventData) {
+            if(IsClicked)
+                return;
+            SmoothMoveLeft();
+        }
+
+        public void OnPointerExit(PointerEventData eventData) {
+            if(IsClicked)
+                return;
+            SmoothMoveRight();
         }
 
         private IEnumerator SmoothMove(Vector2 target) {

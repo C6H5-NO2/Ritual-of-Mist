@@ -8,12 +8,11 @@ namespace ThisGame.Items {
 
         public IdSoDict<ItemDescription> Dict { get; private set; }
 
-        // todo
-        //[RuntimeInitializeOnLoadMethod]
+        [RuntimeInitializeOnLoadMethod]
         private static void Init() {
             if(Instance != null)
                 return;
-            Instance = Resources.Load<ItemDescDict>("SOs/DefaultItemDescDict");
+            Instance = Resources.Load<ItemDescDict>("SOs/Dicts/DefaultItemDescDict");
             var sos = Resources.LoadAll<ItemDescription>("SOs/ItemDescription");
             Instance.Dict = new IdSoDict<ItemDescription>(sos, true);
         }

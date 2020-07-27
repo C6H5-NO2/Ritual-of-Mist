@@ -4,7 +4,7 @@ using ThisGame.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThisGame.NewAdv {
+namespace ThisGame.Adventure {
     public class AdvPrepUI : MonoBehaviour {
         public Image locImage;
         public Button confirmBtn;

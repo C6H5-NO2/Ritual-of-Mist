@@ -1,27 +1,29 @@
 ﻿using System;
-using ThisGame.NewAdv;
+using ThisGame.Adventure;
 using UnityEngine;
 
 namespace ThisGame.Picbook {
     public class PicbookLabelList : MonoBehaviour {
         public GameObject labelPrefab;
-
-        private Transform listTransfrom;
+        public Transform listTransfrom;
 
         public Action<LocationData> OnClickedItemChanged { private get; set; }
         private PicbookLabelHolder clickedlLabel;
         public PicbookLabelHolder ClickedLabel {
             get => clickedlLabel;
             set {
-                if(clickedlLabel != null)
-                    clickedlLabel.labelTrans.anchoredPosition = PicbookLabelHolder.UnfocusPos;
+                if(!(clickedlLabel is null) && clickedlLabel.isActiveAndEnabled) {
+                    clickedlLabel.IsClicked = false;
+                    clickedlLabel.SmoothMoveRight();
+                }
                 if(value == null) {
                     clickedlLabel = null;
                     OnClickedItemChanged?.Invoke(null);
                 }
                 else {
                     clickedlLabel = value;
-                    clickedlLabel.labelTrans.anchoredPosition = Vector2.zero;
+                    clickedlLabel.IsClicked = true;
+                    clickedlLabel.SmoothMoveLeft();
                     OnClickedItemChanged?.Invoke(clickedlLabel.Location);
                 }
             }
@@ -38,10 +40,6 @@ namespace ThisGame.Picbook {
             foreach(Transform label in listTransfrom)
                 Destroy(label.gameObject);
             ClickedLabel = null;
-        }
-
-        private void Awake() {
-            listTransfrom = transform;
         }
     }
 }

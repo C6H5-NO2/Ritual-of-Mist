@@ -32,9 +32,7 @@ namespace ThisGame.Letter {
             var letters = LetterManager.Instance.ReceivedLetters;
             if(letters.Count == 0)
                 return;
-            for(currLetter = letters.Count - 1; currLetter > 0; --currLetter)
-                if(letters[currLetter].Read)
-                    break;
+            currLetter = letters.Count - 1;
             UpdateUI(currLetter);
         }
 

@@ -37,10 +37,17 @@ namespace ThisGame.Letter {
 
         protected override void Awake() {
             if(Instance == null) {
+                TimeManager.Instance.OnNewDay += PushOnDay;
+
                 var sos = Resources.LoadAll<LetterData>("SOs/LetterData");
                 this.Dict = new IdSoDict<LetterData>(sos, true);
                 this.ReceivedLetters = new List<LetterData>();
-                TimeManager.Instance.OnNewDay += PushOnDay;
+
+                foreach(var so in sos) {
+                    // todo: read from json
+                    so.Received = false;
+                    so.Read = false;
+                }
             }
             base.Awake();
         }

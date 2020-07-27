@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6b0ed2bef44e499c70c8635b5e5ef, type: 3}
+  m_Name: WitchHouse
+  m_EditorClassIdentifier: 
+  id: 2
+  nameid: witch_house
+  name: "\u5973\u5DEB\u5C0F\u5C4B"
+  desc: "\u4E00\u5757\u6CE5\u677F\u5728\u51E0\u9897\u5DE8\u6728\u7684\u73AF\u7ED5\u4E0B\u5341\u5206\u9690\u853D\uFF0C\u5B83\u7684\u8868\u9762\u6CDB\u51FA\u626D\u66F2\u7684\u7EB9\u7406\uFF0C\u8BA9\u5B83\u770B\u4E0A\u53BB\u50CF\u662F\u6DB2\u4F53\u53C8\u50CF\u662F\u56FA\u4F53\u3002\u5728\u5DE8\u6728\u7E41\u8302\u679D\u53F6\u7684\u906E\u853D\u4E0B\uFF0C\u4E9B\u8BB8\u5149\u4EAE\u7167\u5728\u4E86\u77F3\u677F\u7684\u8868\u9762\uFF0C\u5149\u6591\u5374\u4E0D\u66FE\u51FA\u73B0\u5728\u4E86\u77F3\u677F\u4E4B\u4E0A\u3002"
+  image: {fileID: 21300014, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}
+  locSymbolPos: {x: -24.3, y: -13}
+  goldCost: 50
+  timeCost: 5
+  uibgs:
+  - {fileID: 21300022, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  - {fileID: 21300054, guid: e30e3c8d46aa9154c9549fbf3efd9023, type: 3}
+  - {fileID: 21300024, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  events:
+  - {fileID: 11400000, guid: 80bca94790d4fa7459c6a1fef8812205, type: 2}
+  - {fileID: 11400000, guid: b591cbf587451af4988b8d5c7744f6ef, type: 2}
+  - {fileID: 11400000, guid: e13dd02aee79a8d4ba08c9b7c5da8400, type: 2}
+  - {fileID: 11400000, guid: 08089442506ea604a9f6bfceac066464, type: 2}
+  - {fileID: 11400000, guid: f708c9bd8d4a136429a94e810e1b6b43, type: 2}
+  - {fileID: 11400000, guid: b73e64b73f2462e459441ed7844af1b3, type: 2}
+  - {fileID: 11400000, guid: 9dd6799fc311ecd4a89c61782e59cb4f, type: 2}

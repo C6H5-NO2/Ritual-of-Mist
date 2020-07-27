@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace ThisGame.NewAdv {
+namespace ThisGame.Adventure {
     public class MapUI : MonoBehaviour {
         public GameObject locBtnPrefab;
         public Transform locs;

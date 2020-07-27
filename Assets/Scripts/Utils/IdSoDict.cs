@@ -51,7 +51,24 @@ namespace ThisGame.Utils {
         public T this[uint id] => idDict[id];
         public T this[string nameid] => idDict[nameidDict[nameid]];
 
+        public uint NameidToId(string nameid) => nameidDict[nameid];
+
+        public bool ContinuityCheck(out uint idx) {
+            idx = 0;
+            for(var i = 1u; i <= idDict.Count; ++i)
+                try {
+                    var so = idDict[i];
+                }
+                catch(KeyNotFoundException) {
+                    idx = i;
+                    return false;
+                }
+            return true;
+        }
+
         private void SanCheck(T so) {
+            if(so.id == 0)
+                throw new ArgumentException($"IDSO of name {so.name} contains reserved id 0");
             if(idDict.ContainsKey(so.id))
                 throw new ArgumentException($"IDSO of name {so.name} contains duplicated id");
             if(nameidDict.ContainsKey(so.nameid))

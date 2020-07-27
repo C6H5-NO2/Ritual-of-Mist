@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: Depth2
+  m_EditorClassIdentifier: 
+  id: 34
+  nameid: cave_depth_2
+  name: "\u6DF1\u5165 2"
+  desc: "\u6211\u559D\u4E0B\u836F\u6C34\uFF0C\u6DF1\u6F5C\u8FDB\u5165\u4E0B\u5C42\u3002\u76F8\u6BD4\u4E8E\u4E0A\u5C42\uFF0C\u6B64\u5904\u7684\u5730\u9762\u975E\u5E38\u575A\u56FA\uFF0C\u5B9D\u77F3\u76F4\u63A5\u88F8\u9732\u5728\u5899\u4F53\u4E0A\uFF0C\u4E0E\u5899\u4E0A\u7684\u58C1\u753B\u76F8\u4E92\u886C\u6620\uFF0C\u6C34\u6D41\u4F7F\u5F97\u753B\u9762\u53D1\u751F\u4E86\u6CE2\u52A8\uFF0C\u6211\u770B\u7684\u5E76\u4E0D\u771F\u5207\u3002"
+  image: {fileID: 21300004, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

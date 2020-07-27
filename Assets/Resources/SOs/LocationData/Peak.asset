@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6b0ed2bef44e499c70c8635b5e5ef, type: 3}
+  m_Name: Peak
+  m_EditorClassIdentifier: 
+  id: 5
+  nameid: peak
+  name: "\u5C71\u5CF0"
+  desc: "\u8FD9\u5EA7\u5C71\u5DCD\u5CE8\u8038\u7ACB\uFF0C\u5DE8\u5927\u7684\u5CA9\u5757\u663E\u9732\u51FA\u6574\u9F50\u7684\u65AD\u9762\uFF0C\u5982\u4F17\u661F\u6367\u6708\u822C\u5448\u9636\u68AF\u72B6\u73AF\u7ED5\u7740\u5C71\u9876\u7684\u9AD8\u5730\u3002\u5728\u5C71\u8170\u5904\uFF0C\u5DE8\u5927\u7684\u85E4\u66FC\u963B\u6321\u7740\u65C5\u4EBA\u7684\u6B65\u4F10\u3002\u867D\u7136\u6B64\u5904\u5E76\u975E\u5728\u6781\u5730\uFF0C\u4E0D\u8FC7\u5C71\u9876\u4E0A\u65F6\u5E38\u6709\u6781\u5149\u4E00\u6837\u7684\u5149\u5E55\u5728\u5BD2\u51B7\u7684\u591C\u665A\u51FA\u73B0\u3002"
+  image: {fileID: 21300010, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}
+  locSymbolPos: {x: -64, y: 369}
+  goldCost: 200
+  timeCost: 20
+  uibgs:
+  - {fileID: 21300000, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  - {fileID: 21300044, guid: e30e3c8d46aa9154c9549fbf3efd9023, type: 3}
+  - {fileID: 21300028, guid: eff292cd5dabbc546ad70fe49fda845a, type: 3}
+  events:
+  - {fileID: 11400000, guid: 235a138bde0723b42bc69804639cb887, type: 2}
+  - {fileID: 11400000, guid: 8c72ed6edd6b00146ac8bb13bed2ff75, type: 2}
+  - {fileID: 11400000, guid: 4e94860d3a63a224cbacaeb7ac9fc4ab, type: 2}
+  - {fileID: 11400000, guid: 5d6be66821a42d34b810cbf5be2272a8, type: 2}
+  - {fileID: 11400000, guid: 5dff3931200f4b444900e9b54f08b1f6, type: 2}
+  - {fileID: 11400000, guid: 99bfa85d7ef9ace4c96cb8e0b700ba2a, type: 2}

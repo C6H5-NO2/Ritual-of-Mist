@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: Survey1
+  m_EditorClassIdentifier: 
+  id: 29
+  nameid: forest_survey_1
+  name: "\u8C03\u67E5 1"
+  desc: "\u4ED4\u7EC6\u63A2\u8BBF\u8FD9\u5EA7\u68EE\u6797\u540E\uFF0C\u6211\u5DF2\u7ECF\u5927\u81F4\u4E86\u89E3\u4E86\u6B64\u5730\u7684\u5730\u7406\u72B6\u51B5\uFF0C\u6211\u60F3\u6211\u53EF\u4EE5\u5411\u68EE\u6797\u5947\u7279\u4E4B\u5904\u8FDB\u4E00\u6B65\u63A2\u7D22\u4E86\u3002"
+  image: {fileID: 21300018, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

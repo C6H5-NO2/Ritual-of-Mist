@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: Survey3
+  m_EditorClassIdentifier: 
+  id: 44
+  nameid: cave_survey_3
+  name: "\u8C03\u67E5 3"
+  desc: "\u6211\u4ED4\u7EC6\u52D8\u5BDF\u4E86\u7B2C\u4E8C\u5C42\uFF0C\u8FD9\u91CC\u6709\u6C34\u6D41\u51B2\u5237\u7684\u75D5\u8FF9\uFF0C\u6CE5\u6C99\u548C\u788E\u77F3\u5411\u4E00\u4E2A\u65B9\u5411\u9012\u51CF\u5206\u5E03\u3002\u5728\u5730\u4E0B\u6C34\u4F4D\u8D77\u8D77\u4F0F\u4F0F\u95F4\uFF0C\u8FD9\u91CC\u4E0D\u65AD\u5730\u88AB\u6C34\u586B\u6EE1\uFF0C\u53C8\u968F\u6C34\u4F4D\u6062\u590D\u800C\u9732\u51FA\uFF0C\u7A7A\u95F4\u5185\u7684\u7269\u54C1\u88AB\u6C34\u6D41\u5E26\u5165\u6697\u6CB3\uFF0C\u6D41\u5411\u5C71\u4E0B\u7684\u6E56\u6CCA\u3002"
+  image: {fileID: 21300004, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

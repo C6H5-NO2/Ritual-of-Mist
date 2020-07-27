@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: FishingSucceed
+  m_EditorClassIdentifier: 
+  id: 8
+  nameid: lake_fishing_succeeded
+  name: "\u9493\u9C7C\u6210\u529F"
+  desc: "\u54AC\u94A9\uFF01\u6211\u62C9\u626F\u7740\u9C7C\u7EBF\uFF0C\u4E0D\u65F6\u653E\u677E\u53C8\u62C9\u7D27\uFF0C\u5982\u6B64\u53CD\u590D\u6D88\u8017\u7740\u9C7C\u7684\u4F53\u529B\uFF0C\u8FD9\u6C34\u7684\u963B\u529B\u975E\u5E38\u5927\uFF0C\u5B83\u5728\u6E56\u9762\u4E0A\u7FFB\u817E\u7ADF\u6CA1\u6709\u6FC0\u8D77\u592A\u5927\u7684\u6C34\u82B1\u3002\u6211\u7684\u9C7C\u7AFF\u5DF2\u7ECF\u63A5\u8FD1\u6781\u9650\uFF0C\u5728\u5343\u94A7\u4E00\u53D1\u4E4B\u9645\uFF0C\u4E00\u8BB0\u6F02\u4EAE\u7684\u63D0\u6746\u8BA9\u6211\u6536\u83B7\u4E86\u4E00\u6761\u9C9C\u6D3B\u7684\u9C7C\u3002"
+  image: {fileID: 21300002, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

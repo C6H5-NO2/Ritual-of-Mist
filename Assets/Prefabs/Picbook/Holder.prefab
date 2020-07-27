@@ -156,7 +156,7 @@ RectTransform:
   m_Father: {fileID: 7147446939676188702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.08, y: 0.08}
+  m_AnchorMin: {x: 0.13, y: 0.08}
   m_AnchorMax: {x: 0.97, y: 0.88}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -200,4 +200,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u66AE\u5149\u68EE\u6797"
+  m_Text: 

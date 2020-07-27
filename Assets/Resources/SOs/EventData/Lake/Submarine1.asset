@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: Submarine1
+  m_EditorClassIdentifier: 
+  id: 10
+  nameid: lake_submarine_1
+  name: "\u6C34\u4E2D\u63A2\u7D22 1"
+  desc: "\u6211\u5728\u6E56\u5E95\u5BFB\u89C5\u4E86\u4E00\u9635\uFF0C\u53D1\u73B0\u4E00\u5757\u65AD\u88C2\u7684\u77F3\u677F\uFF0C\u84DD\u8272\u7684\u6CE2\u7EB9\u5728\u5E7D\u6697\u7684\u6E56\u5E95\u95EA\u52A8\u7740\u51B7\u8272\u7684\u5149\u3002\u5B83\u7D27\u5B9E\u7684\u5D4C\u5728\u4E00\u5757\u539A\u91CD\u7684\u5CA9\u77F3\u4E0A\uFF0C\u5468\u56F4\u6C89\u79EF\u7684\u6C99\u571F\u5728\u65F6\u95F4\u7684\u79EF\u7D2F\u4E0B\u5F62\u6210\u4E86\u4E00\u5C42\u575A\u786C\u7684\u4FDD\u62A4\u5C42\uFF0C\u6211\u51DD\u805A\u8D77\u6C34\u6D41\u8BD5\u56FE\u65BD\u52A0\u538B\u529B\uFF0C\u4F46\u5E76\u6CA1\u6709\u5B9E\u8D28\u6027\u7684\u6548\u679C\u3002\u6211\u9700\u8981\u7528\u5F3A\u529B\u7684\u91D1\u5C5E\u7834\u5F00\u5B83\u4EEC\u3002"
+  image: {fileID: 21300002, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

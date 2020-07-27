@@ -20,7 +20,7 @@ namespace ThisGame.Bag {
             gridLayout.ClickedItem = null;
 
             // todo: use callback
-            moneyText.text = BagManager.Instance.Gold + " G";
+            moneyText.text = $"{BagManager.Instance.Gold} G";
 
             var inBag = BagManager.Instance.InBag;
             if(inBag is null)
@@ -83,16 +83,18 @@ namespace ThisGame.Bag {
 
         private void UpdateText(GridItemControl item) {
             if(gridLayout.HasClickedItem) {
-                descText.text = item.ItemDesc.desc;
-                var prop = item.ItemDesc.properties;
+                var desc = item.ItemDesc;
+
+                // todo: format description
+                descText.text = $"{desc.name}：\n{desc.desc}";
+
+                var prop = desc.properties;
                 var sb = new StringBuilder(32);
-                sb.AppendFormat("刀刃：{0}", prop[(int)ItemProperty.Metal])
-                  .AppendLine()
-                  .AppendFormat("灵气：{0}", prop[(int)ItemProperty.Spirit])
-                  .AppendLine()
-                  .AppendFormat("能量：{0}", prop[(int)ItemProperty.Energy])
-                  .AppendLine()
-                  .AppendFormat("食物：{0}", prop[(int)ItemProperty.Food]);
+                sb.AppendLine($"金属：{prop[(int)ItemProperty.Metal]}　　灵气：{prop[(int)ItemProperty.Spirit]}");
+                sb.AppendLine($"能量：{prop[(int)ItemProperty.Energy]}　　食物：{prop[(int)ItemProperty.Food]}");
+                if(desc.isExhaust)
+                    sb.AppendLine("消耗品");
+                sb.Append(desc.sellPrice >= 0 ? $"售价：{desc.sellPrice} G" : "不可出售");
                 propText.text = sb.ToString();
             }
             else {

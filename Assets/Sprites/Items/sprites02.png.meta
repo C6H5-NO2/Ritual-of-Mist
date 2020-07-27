@@ -4,49 +4,49 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: ruby_big
     21300002: sapphire_big
-    21300004: knife_lv2
-    21300006: mushroom_glow
+    21300004: crystal_blade
+    21300006: glowing_mushroom
     21300008: flavoured_fish
     21300010: ruby_small
     21300012: ice
     21300014: branch_hard
     21300016: acorn
-    21300018: sapphire_small
+    21300018: mixed_crystal
     21300020: sextant
-    21300022: dragon_scale
+    21300022: mysterious_scale
     21300024: potion_dragon_breath
-    21300026: emerald_small
+    21300026: moonlight_crystal
     21300028: frame_of_paradox
     21300030: woodwand
     21300032: energywand
-    21300034: potion_huge_tree
-    21300036: mushroom_grilled
-    21300038: bottle
+    21300034: potion_of_woods
+    21300036: grilled_mushroom
+    21300038: bottle_solution
     21300040: potion_water_elf
     21300042: sprites02_23
     21300044: meat_1
     21300046: meat_2
     21300048: meat_roll
-    21300050: knife_lv3
-    21300052: mushroom_forestround
+    21300050: ice_blade
+    21300052: ring_mushroom
     21300054: heart_of_mountain
     21300056: rope
-    21300058: branch_world
+    21300058: branch_huge
     21300060: iron_ore
-    21300062: coat_of_arms
-    21300064: coat_of_arms_fragment_1
-    21300066: coat_of_arms_fragment_2
-    21300068: spice_1
-    21300070: spice_2
-    21300072: spice_3
-    21300074: fish_1
-    21300076: fish_2
-    21300078: fishing_rod_1
-    21300080: fishing_rod_2
-    21300082: cast
-    21300084: spice_4
-    21300086: pipe
-    21300088: knife_lv1
+    21300062: key_to_mountain
+    21300064: mountkey_fragment_r
+    21300066: mountkey_fragment_l
+    21300068: angelica
+    21300070: macadamia
+    21300072: bloodberry
+    21300074: stone_fish
+    21300076: red_fish
+    21300078: fishing_rod
+    21300080: fishing_rod_momentum
+    21300082: spirit_mould
+    21300084: pupafruit
+    21300086: strange_pipe
+    21300088: iron_blade
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -169,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knife_lv2
+      name: crystal_blade
       rect:
         serializedVersion: 2
         x: 366
@@ -189,12 +189,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_glow
+      name: glowing_mushroom
       rect:
         serializedVersion: 2
-        x: 525
+        x: 532
         y: 695
-        width: 95
+        width: 88
         height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sapphire_small
+      name: mixed_crystal
       rect:
         serializedVersion: 2
         x: 337
@@ -349,11 +349,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dragon_scale
+      name: mysterious_scale
       rect:
         serializedVersion: 2
         x: 619
-        y: 548
+        y: 549
         width: 97
         height: 97
       alignment: 0
@@ -389,7 +389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emerald_small
+      name: moonlight_crystal
       rect:
         serializedVersion: 2
         x: 856
@@ -469,7 +469,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potion_huge_tree
+      name: potion_of_woods
       rect:
         serializedVersion: 2
         x: 29
@@ -489,7 +489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_grilled
+      name: grilled_mushroom
       rect:
         serializedVersion: 2
         x: 187
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bottle
+      name: bottle_solution
       rect:
         serializedVersion: 2
         x: 45
@@ -572,9 +572,9 @@ TextureImporter:
       name: meat_2
       rect:
         serializedVersion: 2
-        x: 460
+        x: 462
         y: 411
-        width: 102
+        width: 100
         height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -609,7 +609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knife_lv3
+      name: ice_blade
       rect:
         serializedVersion: 2
         x: 766
@@ -629,7 +629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroom_forestround
+      name: ring_mushroom
       rect:
         serializedVersion: 2
         x: 1002
@@ -689,7 +689,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: branch_world
+      name: branch_huge
       rect:
         serializedVersion: 2
         x: 177
@@ -729,7 +729,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coat_of_arms
+      name: key_to_mountain
       rect:
         serializedVersion: 2
         x: 460
@@ -749,7 +749,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coat_of_arms_fragment_1
+      name: mountkey_fragment_r
       rect:
         serializedVersion: 2
         x: 638
@@ -769,7 +769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coat_of_arms_fragment_2
+      name: mountkey_fragment_l
       rect:
         serializedVersion: 2
         x: 794
@@ -789,13 +789,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spice_1
+      name: angelica
       rect:
         serializedVersion: 2
         x: 975
         y: 238
         width: 105
-        height: 112
+        height: 109
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,11 +809,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spice_2
+      name: macadamia
       rect:
         serializedVersion: 2
         x: 1124
-        y: 244
+        y: 245
         width: 109
         height: 106
       alignment: 0
@@ -829,7 +829,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spice_3
+      name: bloodberry
       rect:
         serializedVersion: 2
         x: 1284
@@ -849,7 +849,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_1
+      name: stone_fish
       rect:
         serializedVersion: 2
         x: 13
@@ -869,7 +869,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fish_2
+      name: red_fish
       rect:
         serializedVersion: 2
         x: 165
@@ -889,7 +889,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing_rod_1
+      name: fishing_rod
       rect:
         serializedVersion: 2
         x: 368
@@ -909,7 +909,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fishing_rod_2
+      name: fishing_rod_momentum
       rect:
         serializedVersion: 2
         x: 580
@@ -929,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cast
+      name: spirit_mould
       rect:
         serializedVersion: 2
         x: 784
@@ -949,13 +949,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spice_4
+      name: pupafruit
       rect:
         serializedVersion: 2
         x: 948
-        y: 115
+        y: 116
         width: 103
-        height: 105
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -969,7 +969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipe
+      name: strange_pipe
       rect:
         serializedVersion: 2
         x: 1112
@@ -989,7 +989,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: knife_lv1
+      name: iron_blade
       rect:
         serializedVersion: 2
         x: 1236

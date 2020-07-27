@@ -1,16 +1,5 @@
 ﻿using UnityEngine;
 
-// todo: supress bugs
-public struct TimeWeather {
-    public TimeWeather(float time, ThisGame.Utils.Weather weather) {
-        this.time = time;
-        this.weather = weather;
-    }
-
-    public readonly float time;
-    public readonly ThisGame.Utils.Weather weather;
-}
-
 namespace ThisGame.Utils {
     // avoid naming conflict with UnityEngine.Time
     public struct Zeit {

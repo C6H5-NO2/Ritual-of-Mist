@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: FogBlock
+  m_EditorClassIdentifier: 
+  id: 57
+  nameid: deepforest_fog_block
+  name: "\u96FE\u6C14\u963B\u9694"
+  desc: "\u968F\u7740\u6211\u4E00\u6B65\u6B65\u6500\u767B\u800C\u4E0A\uFF0C\u6211\u770B\u5230\u6D53\u539A\u7684\u96FE\u6C14\u4ECE\u6811\u51A0\u5F80\u4E0B\u6D41\u52A8\uFF01\u6211\u611F\u5230\u7CBE\u795E\u6709\u4E9B\u604D\u60DA\uFF0C\u6211\u5E94\u8BE5\u505C\u6B62\u63A2\u7D22\uFF0C\u4E5F\u8BB8\u7B49\u5230\u5929\u6C14\u826F\u597D\u7684\u65F6\u95F4\u518D\u6765\u63A2\u7D22\u3002"
+  image: {fileID: 21300016, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

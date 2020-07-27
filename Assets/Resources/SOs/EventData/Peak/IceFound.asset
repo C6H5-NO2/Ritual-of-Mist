@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0c0766e222f284cbfd667a28833d14, type: 3}
+  m_Name: IceFound
+  m_EditorClassIdentifier: 
+  id: 49
+  nameid: peak_ice_found
+  name: "\u53D1\u73B0\u575A\u51B0"
+  desc: "\u6211\u5728\u51B0\u96EA\u8986\u76D6\u7684\u5730\u65B9\u641C\u5BFB\u5230\u4E00\u5757\u575A\u51B0\uFF0C\u5468\u56F4\u7684\u96EA\u7C92\u4EE5\u602A\u5F02\u7684\u5F62\u6001\u5851\u9020\u4E86\u4E00\u5C42\u8584\u8584\u7684\u5916\u58F3\uFF0C\u8FD9\u91CC\u7684\u7075\u529B\u5145\u88D5\uFF0C\u575A\u51B0\u4E4B\u4E2D\u4F3C\u4E4E\u6709\u7EC6\u5FAE\u7684\u5149\u70B9\u5728\u95EA\u52A8\uFF0C\u5E94\u8BE5\u4F1A\u662F\u4E0D\u9519\u7684\u70BC\u91D1\u7D20\u6750\u3002"
+  image: {fileID: 21300010, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c46afd51c602de4bb708349762ba6b6, type: 3}
+  m_Name: Meat2
+  m_EditorClassIdentifier: 
+  id: 24
+  nameid: meat_2
+  name: "\u79BD\u7C7B\u8089\u5757"
+  desc: "\u5E38\u89C1\u7684\u98DF\u6750\uFF0C\u8089\u8D28\u7D27\u5B9E\uFF0C\u6CB9\u8102\u4E30\u5BCC\u3002"
+  image: {fileID: 21300046, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
+  properties: 00000000
+  isExhaust: 0
+  sellPrice: 15
+  prefabTemplate: {fileID: 3387020282410114970, guid: 5d28af87ab548234a8f7b9fd79204fb0,
+    type: 3}

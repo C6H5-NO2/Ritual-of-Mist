@@ -17,11 +17,14 @@ namespace ThisGame.Utils {
         private Weather dayWeather;
         public Weather DayWeather {
             get => dayWeather;
-            set {
+            private set {
                 dayWeather = value;
                 OnNewWeather?.Invoke(dayWeather);
             }
         }
+
+
+        public void ForceSetWeather(Weather weather) => DayWeather = weather;
 
 
         private void UpdateWeather(int day) {
