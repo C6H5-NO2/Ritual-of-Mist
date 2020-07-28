@@ -15,7 +15,7 @@ namespace ThisGame.GeneralUI {
             var go = eventData.pointerDrag;
             if(go.CompareTag("DragItem")) {
                 var scrp = go.GetComponent<ItemDrag>();
-                scrp.DropSlot = this;
+                scrp.DropSlot = this.transform;
             }
         }
     }

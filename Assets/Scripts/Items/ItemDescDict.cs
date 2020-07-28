@@ -8,7 +8,7 @@ namespace ThisGame.Items {
 
         public IdSoDict<ItemDescription> Dict { get; private set; }
 
-        [RuntimeInitializeOnLoadMethod]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Init() {
             if(Instance != null)
                 return;

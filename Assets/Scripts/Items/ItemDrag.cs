@@ -7,7 +7,8 @@ namespace ThisGame.GeneralUI {
                             IBeginDragHandler,
                             IDragHandler,
                             IEndDragHandler {
-        public SingleSlotDrop DropSlot { private get; set; }
+        //public SingleSlotDrop DropSlot { private get; set; }
+        public Transform DropSlot { private get; set; }
 
         private Camera refCam;
         private Vector2 screenWorldOffset;
@@ -72,6 +73,9 @@ namespace ThisGame.GeneralUI {
         private void OnSlotToCanvas() {
             transform.SetParent(initialParent);
             rectTransform.sizeDelta = initialSize;
+
+            // bug: wtf???
+            GetComponent<UnityEngine.UI.Image>().SetNativeSize();
         }
 
 
@@ -81,15 +85,21 @@ namespace ThisGame.GeneralUI {
         }
 
 
-        private const float ScaleRatio = 0.796f;
+        public const float ScaleRatio = 0.796f;
 
         private void OnCanvasToSlot() {
             var slot = (RectTransform)DropSlot.transform;
 
             if(slot.childCount != 0) {
-                var child = slot.GetChild(0).GetComponent<ItemDrag>();
-                child.OnSlotToCanvas();
-                ((RectTransform)child.transform).anchoredPosition = positionBeginDrag;
+                //var childDrag = slot.GetChild(0).GetComponent<ItemDrag>();
+                foreach(Transform child in slot) {
+                    var childDrag = child.GetComponent<ItemDrag>();
+                    if(childDrag != null) {
+                        childDrag.OnSlotToCanvas();
+                        ((RectTransform)child).anchoredPosition = positionBeginDrag;
+                        break;
+                    }
+                }
             }
 
             transform.SetParent(slot);
@@ -102,10 +112,15 @@ namespace ThisGame.GeneralUI {
             var slot = (RectTransform)DropSlot.transform;
 
             if(slot.childCount != 0) {
-                var child = (RectTransform)slot.GetChild(0);
-                child.SetParent(parentBeginDrag);
-                child.sizeDelta = ((RectTransform)parentBeginDrag).sizeDelta * ScaleRatio;
-                child.anchoredPosition = Vector2.zero;
+                //var child = (RectTransform)slot.GetChild(0);
+                foreach(RectTransform child in slot) {
+                    if(child.GetComponent<ItemDrag>() != null) {
+                        child.SetParent(parentBeginDrag);
+                        child.sizeDelta = ((RectTransform)parentBeginDrag).sizeDelta * ScaleRatio;
+                        child.anchoredPosition = Vector2.zero;
+                        break;
+                    }
+                }
             }
 
             transform.SetParent(slot);

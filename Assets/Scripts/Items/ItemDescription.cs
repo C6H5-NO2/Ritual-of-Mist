@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 
 namespace ThisGame.Items {
-    public enum ItemProperty : byte {
-        Metal,
-        Spirit,
-        Energy,
-        Food,
-        Count
-    }
+    public enum ItemProperty : byte { Metal, Spirit, Energy, Food, Count }
 
 
     [CreateAssetMenu(fileName = "Item", menuName = "Items/Item Description")]
@@ -17,14 +11,11 @@ namespace ThisGame.Items {
         public int sellPrice;
         public GameObject prefabTemplate;
 
-
         public GameObject Instantiate(Transform canvas) {
             var go = Instantiate(prefabTemplate, canvas, false);
             var holder = go.GetComponent<ItemDescHolder>();
-            if(holder != null) {
-                holder.Description = this;
-                holder.UpdateDesc();
-            }
+            holder.Description = this;
+            holder.UpdateDesc();
             return go;
         }
     }

@@ -11,11 +11,7 @@ namespace ThisGame.Letter {
         public Sprite closed, empty, full;
 
 
-        private enum State {
-            Closed,
-            Empty,
-            Full
-        }
+        private enum State { Closed, Empty, Full }
 
         private State iconState;
 

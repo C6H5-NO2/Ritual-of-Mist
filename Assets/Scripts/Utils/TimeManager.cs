@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 namespace ThisGame.Utils {
+    public enum TimeConstraint { None, Day, Night }
+
     // avoid naming conflict with UnityEngine.Time
     public struct Zeit {
         public Zeit(float time) => zeit = time;

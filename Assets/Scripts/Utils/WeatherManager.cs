@@ -1,12 +1,7 @@
 ﻿using UnityEngine;
 
 namespace ThisGame.Utils {
-    public enum Weather {
-        Foggy,
-        Rainy,
-        Sunny,
-        Count
-    }
+    public enum Weather { Foggy, Rainy, Sunny, Count }
 
     public class WeatherManager : SingletonManager<WeatherManager> {
         public delegate void NewWeather(Weather weather);
