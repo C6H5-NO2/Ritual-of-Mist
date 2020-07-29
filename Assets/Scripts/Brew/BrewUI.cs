@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Linq;
 using ThisGame.Items;
 using ThisGame.Utils;
@@ -16,20 +14,58 @@ namespace ThisGame.Brew {
         public Button confirmBtn;
         public Text confirmText;
 
+        public PlayerIcon.PotIcon potIcon;
+        public GameObject brewMsgUIPrefab;
+
+
+        private int SlotCount => slots.Count(slot => !slot.Empty);
+        private bool IsEmpty => SlotCount == 0;
+        private bool IsFull => SlotCount == 3;
 
         private PotState state;
 
         public void SetState(PotState state) {
             this.state = state;
-            if(state == PotState.BrewPrep)
-                confirmText.text = "酿造";
-            else if(state == PotState.CraftPrep)
-                confirmText.text = "合成";
+            UpdateBtnText();
+            UpdateBtn();
+
+            potIcon.SetState(state, IsEmpty);
+        }
+
+        // ------- Handle UI Changes -------
+
+        private void UpdateBtnText() {
+            switch(state) {
+                case PotState.BrewPrep:
+                    confirmText.text = "酿造";
+                    break;
+                case PotState.BrewPrg:
+                    confirmText.text = "酿造中...";
+                    break;
+                case PotState.CraftPrep:
+                    confirmText.text = "合成";
+                    break;
+            }
+        }
+
+        private void UpdateBtn() {
+            var count = SlotCount;
+            switch(state) {
+                case PotState.BrewPrep:
+                    confirmBtn.interactable = count != 1;
+                    break;
+                case PotState.BrewPrg:
+                    confirmBtn.interactable = false;
+                    break;
+                case PotState.CraftPrep:
+                    confirmBtn.interactable = count > 1;
+                    break;
+            }
+            confirmText.color = confirmBtn.interactable ? Color.black : new Color(.2f, .2f, .2f, 1);
         }
 
 
-        public bool IsFull => !(slots[0].Empty || slots[1].Empty || slots[2].Empty);
-
+        // ------- Handle Drag & Drop -------
 
         public void OnDropToPot(ItemDescHolder holder) {
             if(state == PotState.BrewPrg)
@@ -48,9 +84,9 @@ namespace ThisGame.Brew {
         }
 
         /// <remarks> check IsFull before call </remarks>
-        private void AddToEmptySlot(uint id) {
-            var go = itemDict[id].Instantiate(onTableCanvas);
-            var slot = (from s in slots where s.Item == null select (RectTransform)s.transform).First();
+        public void AddToEmptySlot(uint id) {
+            var go = itemDict[id].Instantiate(inSceneObjRef.OnTable);
+            var slot = (from s in slots where s.Empty select (RectTransform)s.transform).First();
             var item = (RectTransform)go.transform;
             // see GeneralUI.ItemDrag.OnCanvasToSlot
             item.SetParent(slot);
@@ -58,19 +94,54 @@ namespace ThisGame.Brew {
             item.anchoredPosition = Vector2.zero;
         }
 
-
         public void OnSlotItemChange() {
-            //var (i0, i1, i2) = GetSlotItems();
-            //const string nan = "NAN";
-            //var n0 = i0 == 0 ? nan : itemDict[i0].name;
-            //var n1 = i1 == 0 ? nan : itemDict[i1].name;
-            //var n2 = i2 == 0 ? nan : itemDict[i2].name;
-            //Debug.Log($"OnSlotItemChange: {n0}, {n1}, {n2}");
+            UpdateBtn();
+
+            potIcon.SetState(state, IsEmpty);
         }
 
 
+        // ------- Start Brew/Craft -------
+
+        private Craft.CraftFormula craftFormula;
+        private BrewFormula formula;
+        private IdSoDict<ItemDescription> itemDict;
+        private InSceneObjRef inSceneObjRef;
+
+        private void OnConfirm() {
+            var (i0, i1, i2) = GetSlotItems();
+            if(state == PotState.BrewPrep) {
+                if(i0 == 0) {
+                    // empty
+                    SetState(PotState.CraftPrep);
+                    return;
+                }
+                var product = formula.CheckIngredient(i0, i1, i2,
+                                                      TimeManager.Instance.DayTime,
+                                                      WeatherManager.Instance.DayWeather);
+                var callback = new GameObject("BrewCallback");
+                callback.AddComponent<BrewCallback>().StartBrew(product, this);
+            }
+            else if(state == PotState.CraftPrep) {
+                if(i2 != 0) {
+                    // has 3 items
+                    CreateMsgUI(BrewMsgUI.MsgType.CraftFail, BrewMsgUI.MsgPos.AboveBrewUI);
+                    return;
+                }
+                var product = craftFormula.CheckIngredient(i0, i1);
+                if(product == 0) {
+                    CreateMsgUI(BrewMsgUI.MsgType.CraftFail, BrewMsgUI.MsgPos.AboveBrewUI);
+                    return;
+                }
+                foreach(var slot in slots)
+                    slot.DestroyItem();
+                AddToEmptySlot(product);
+                CreateMsgUI(BrewMsgUI.MsgType.CraftSuc, BrewMsgUI.MsgPos.AboveBrewUI);
+            }
+        }
+
         private (uint, uint, uint) GetSlotItems() {
-            var ids = (from slot in slots where slot.Item != null select slot.Item.id).ToArray();
+            var ids = (from slot in slots where !slot.Empty select slot.Item.id).ToArray();
             switch(ids.Length) {
                 case 0:
                     return (0, 0, 0);
@@ -83,57 +154,24 @@ namespace ThisGame.Brew {
             }
         }
 
-
-        // todo: use craft table instead
-        private Craft.CraftFormula craftFormula;
-        private BrewFormula formula;
-        private IdSoDict<ItemDescription> itemDict;
-        private Transform onTableCanvas;
-
-        private void OnConfirm() {
-            switch(state) {
-                case PotState.BrewPrep:
-                    // todo
-                    foreach(var slot in slots)
-                        slot.DestroyItem();
-                    Debug.Log("BrewPrep OnConfirm IsFull = " + IsFull);
-                    //SetState(PotState.BrewPrg);
-                    break;
-
-                case PotState.CraftPrep:
-                    var (i0, i1, i2) = GetSlotItems();
-                    if(i2 != 0) {
-                        // todo: show failed message
-                        Debug.Log("craft failed");
-                        break;
-                    }
-                    var product = craftFormula.CheckIngredient(i0, i1);
-                    if(product == 0) {
-                        // todo: show failed message
-                        Debug.Log("craft failed");
-                        break;
-                    }
-                    foreach(var slot in slots)
-                        slot.DestroyItem();
-                    // todo: show success message
-                    Debug.Log("craft success");
-                    AddToEmptySlot(product);
-                    break;
-            }
+        public void CreateMsgUI(BrewMsgUI.MsgType type, BrewMsgUI.MsgPos pos) {
+            var go = Instantiate(brewMsgUIPrefab, inSceneObjRef.CustomUI, false);
+            go.GetComponent<BrewMsgUI>().SetText(type, pos);
         }
 
+
+        // ------- Unity Event Func -------
 
         private void Start() {
             craftFormula = Craft.CraftFormula.Instance;
             formula = BrewFormula.Instance;
             itemDict = ItemDescDict.Instance.Dict;
-            onTableCanvas = InSceneObjRef.Instance.OnTable;
+            inSceneObjRef = InSceneObjRef.Instance;
 
             SetState(PotState.CraftPrep);
 
             gameObject.SetActive(false);
         }
-
 
         private void Awake() {
             confirmBtn.onClick.AddListener(OnConfirm);

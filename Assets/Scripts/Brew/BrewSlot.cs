@@ -24,6 +24,9 @@ namespace ThisGame.Brew {
             placeHolder.sprite = holder.Description.image;
             placeHolder.gameObject.SetActive(true);
             Destroy(holder.gameObject);
+
+            // todo: Destroy don't remove GO immediately
+            OnTransformChildrenChanged();
         }
 
         public void UnlockItem() {
@@ -34,26 +37,18 @@ namespace ThisGame.Brew {
 
         public void DestroyItem() {
             receiveDrop = true;
-            if(transform.childCount > 1)
+            if(transform.childCount > 1) {
                 Destroy(transform.GetChild(1).gameObject);
+
+                // todo: Destroy don't remove GO immediately
+                OnTransformChildrenChanged();
+            }
         }
 
-        private void OnTransformChildrenChanged() {
-            // todo: cache Empty & Item
-            brewUI.OnSlotItemChange();
-        }
 
-        private void Awake() {
-            brewUI = transform.parent.GetComponent<BrewUI>();
-            UnlockItem();
-        }
+        public bool Empty { get; private set; }
 
-        public bool Empty => transform.childCount < 2 ||
-                             !transform.GetChild(1).GetComponent<ItemDescHolder>().isActiveAndEnabled;
-
-
-        public ItemDescription Item
-            => transform.childCount < 2 ? null : transform.GetChild(1).GetComponent<ItemDescHolder>().Description;
+        public ItemDescription Item { get; private set; }
 
         public void OnDrop(PointerEventData eventData) {
             if(!receiveDrop)
@@ -63,6 +58,30 @@ namespace ThisGame.Brew {
                 var scrp = go.GetComponent<ItemDrag>();
                 scrp.DropSlot = this.transform;
             }
+        }
+
+        private void OnTransformChildrenChanged() {
+            if(transform.childCount < 2) {
+                Empty = true;
+                Item = null;
+            }
+            else {
+                var holder = transform.GetChild(1).GetComponent<ItemDescHolder>();
+
+                // bug prone hack
+                // Destroy(holder) must be called when UI is shown
+                Empty = gameObject.activeInHierarchy && !holder.isActiveAndEnabled;
+
+                Item = holder.Description;
+            }
+            brewUI.OnSlotItemChange();
+        }
+
+        private void Awake() {
+            brewUI = transform.parent.GetComponent<BrewUI>();
+            Empty = true;
+            Item = null;
+            UnlockItem();
         }
     }
 }

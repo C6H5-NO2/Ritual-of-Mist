@@ -8,8 +8,18 @@ namespace ThisGame.PlayerIcon {
         private SpriteRenderer sr;
 
 
-        public void SetState(PotState state) {
-            // todo: update sr
+        public void SetState(PotState state, bool isEmpty) {
+            switch(state) {
+                case PotState.BrewPrep:
+                    sr.sprite = isEmpty ? aqua : ingredient;
+                    break;
+                case PotState.BrewPrg:
+                    sr.sprite = boiling;
+                    break;
+                case PotState.CraftPrep:
+                    sr.sprite = empty;
+                    break;
+            }
         }
 
 

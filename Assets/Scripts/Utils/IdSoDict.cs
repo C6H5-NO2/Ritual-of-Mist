@@ -33,20 +33,15 @@ namespace ThisGame.Utils {
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        //public T this[uint id] {
-        //    get {
-        //        idDict.TryGetValue(id, out var so);
-        //        // null UnityObject ? real null
-        //        return so == null ? null : so;
-        //    }
-        //}
+        public bool TryGetValue(uint id, out T value) => idDict.TryGetValue(id, out value);
 
-        //public T this[string nameid] {
-        //    get {
-        //        nameidDict.TryGetValue(nameid, out var id);
-        //        return id == 0 ? null : this[id];
-        //    }
-        //}
+        public bool TryGetValue(string nameid, out T value) {
+            var flag = nameidDict.TryGetValue(nameid, out var id);
+            if(flag)
+                return TryGetValue(id, out value);
+            value = null;
+            return false;
+        }
 
         public T this[uint id] => idDict[id];
         public T this[string nameid] => idDict[nameidDict[nameid]];
