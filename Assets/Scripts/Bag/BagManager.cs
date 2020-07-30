@@ -27,11 +27,14 @@ namespace ThisGame.Bag {
         }
 
 
-        protected override void Awake() {
-            base.Awake();
+        protected override void OnInstanceAwake() {
             if(bagStorage == null) {
                 inBag = new Dictionary<ItemDescription, int>();
-                gold = 500; //0;
+                var dict = ItemDescDict.Instance.Dict;
+                inBag.EaddNset(dict["bottle_solution"], 3);
+                inBag.EaddNset(dict["iron_blade"], 1);
+                inBag.EaddNset(dict["fishing_rod"], 1);
+                gold = 500;
             }
             else {
                 inBag = bagStorage.inBag;

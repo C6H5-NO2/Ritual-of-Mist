@@ -69,24 +69,21 @@ namespace ThisGame.Brew {
                FixedMatch(i2, i0, i1, r0, r1, r2) || FixedMatch(i2, i1, i0, r0, r1, r2);
 
 
-        protected override void Awake() {
-            if(Instance == null) {
-                formulae = new List<(uint, uint, uint, uint, TimeConstraint, Weather)>();
-                itemDict = ItemDescDict.Instance.Dict;
+        protected override void OnInstanceAwake() {
+            formulae = new List<(uint, uint, uint, uint, TimeConstraint, Weather)>();
+            itemDict = ItemDescDict.Instance.Dict;
 
-                AddFormula("flavoured_fish", "red_fish", "macadamia", "bloodberry");
-                AddFormula("meat_roll", "meat_1", "meat_2", "pupafruit");
-                AddFormula("grilled_mushroom", "ring_mushroom", "angelica");
-                AddFormula("potion_dragon_breath", "ruby_big", "bloodberry", "mysterious_scale",
-                           TimeConstraint.None, Weather.Rainy);
-                AddFormula("potion_of_woods", "pupafruit", "acorn", "moonlight_crystal",
-                           TimeConstraint.Night, Weather.Sunny);
-                AddFormula("woodwand", "branch_hard", "angelica", "macadamia");
-                AddFormula("iron_blade", "iron_ore", "iron_ore", "spirit_mould");
-                AddFormula("mixed_crystal", "iron_ore", "sapphire_big", "spirit_mould");
-                AddFormula("rope", "branch_hard", "macadamia");
-            }
-            base.Awake();
+            AddFormula("flavoured_fish", "red_fish", "macadamia", "bloodberry");
+            AddFormula("meat_roll", "meat_1", "meat_2", "pupafruit");
+            AddFormula("grilled_mushroom", "ring_mushroom", "angelica");
+            AddFormula("potion_dragon_breath", "ruby_big", "bloodberry", "mysterious_scale",
+                       TimeConstraint.None, Weather.Rainy);
+            AddFormula("potion_of_woods", "pupafruit", "acorn", "moonlight_crystal",
+                       TimeConstraint.Night, Weather.Sunny);
+            AddFormula("woodwand", "branch_hard", "angelica", "macadamia");
+            AddFormula("iron_blade", "iron_ore", "iron_ore", "spirit_mould");
+            AddFormula("mixed_crystal", "iron_ore", "sapphire_big", "spirit_mould");
+            AddFormula("rope", "branch_hard", "macadamia");
         }
     }
 }

@@ -28,21 +28,18 @@ namespace ThisGame.Craft {
         }
 
 
-        protected override void Awake() {
-            if(Instance == null) {
-                formulae = new List<(uint, uint, uint)>();
-                itemDict = ItemDescDict.Instance.Dict;
+        protected override void OnInstanceAwake() {
+            formulae = new List<(uint, uint, uint)>();
+            itemDict = ItemDescDict.Instance.Dict;
 
-                AddFormula("crystal_blade", "iron_blade", "mixed_crystal");
-                AddFormula("ice_blade", "crystal_blade", "ice");
-                AddFormula("energywand", "woodwand", "ruby_small");
-                AddFormula("fishing_rod_momentum", "fishing_rod", "ruby_small");
-                AddFormula("key_to_mountain", "mountkey_fragment_l", "mountkey_fragment_r");
-                AddFormula("mountkey_fragment_r", "iron_blade", "stone_fish");
-                AddFormula("mountkey_fragment_r", "crystal_blade", "stone_fish");
-                AddFormula("mountkey_fragment_r", "ice_blade", "stone_fish");
-            }
-            base.Awake();
+            AddFormula("crystal_blade", "iron_blade", "mixed_crystal");
+            AddFormula("ice_blade", "crystal_blade", "ice");
+            AddFormula("energywand", "woodwand", "ruby_small");
+            AddFormula("fishing_rod_momentum", "fishing_rod", "ruby_small");
+            AddFormula("key_to_mountain", "mountkey_fragment_l", "mountkey_fragment_r");
+            AddFormula("mountkey_fragment_r", "iron_blade", "stone_fish");
+            AddFormula("mountkey_fragment_r", "crystal_blade", "stone_fish");
+            AddFormula("mountkey_fragment_r", "ice_blade", "stone_fish");
         }
     }
 }

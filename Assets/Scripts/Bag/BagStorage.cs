@@ -5,7 +5,7 @@ namespace ThisGame.Bag {
     [CreateAssetMenu(fileName = "DefaultBagStorage", menuName = "Items/Bag Storage")]
     public class BagStorage : ScriptableObject {
         // todo: write to file
-        [SerializeField] public Dictionary<Items.ItemDescription, int> inBag;
+        public Dictionary<Items.ItemDescription, int> inBag;
         public int gold;
     }
 }

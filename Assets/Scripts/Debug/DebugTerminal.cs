@@ -11,7 +11,7 @@ public class DebugTerminal : MonoBehaviour {
 
 
     private static void ProcessCommand(string command) {
-        var tok = command.Split(' ', '\t');
+        var tok = command.Trim().Split();
         if(tok.Length < 2)
             // error command
             return;
