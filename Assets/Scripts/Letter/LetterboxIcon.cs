@@ -48,10 +48,19 @@ namespace ThisGame.Letter {
                 case State.Empty:
                 case State.Full:
                     letterUI.gameObject.SetActive(true);
+                    StopAllCoroutines();
+                    SetState(State.Closed);
                     break;
             }
         }
 
+
+        private void Start() {
+            LetterManager.Instance.OnReceiveLetter = delegate {
+                iconState = State.Full;
+                icon.sprite = full;
+            };
+        }
 
         private void Awake() {
             SetState(State.Closed);

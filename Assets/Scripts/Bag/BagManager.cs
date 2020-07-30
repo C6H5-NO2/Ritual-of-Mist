@@ -32,10 +32,10 @@ namespace ThisGame.Bag {
                 inBag = new Dictionary<ItemDescription, int>();
                 var dict = ItemDescDict.Instance.Dict;
                 inBag.EaddNset(dict["strange_pipe"], 1);
-                inBag.EaddNset(dict["bottle_solution"], 3);
                 inBag.EaddNset(dict["iron_blade"], 1);
                 inBag.EaddNset(dict["fishing_rod"], 1);
-                gold = 500;
+                inBag.EaddNset(dict["bottle_solution"], 3);
+                gold = 2000;
             }
             else {
                 inBag = bagStorage.inBag;

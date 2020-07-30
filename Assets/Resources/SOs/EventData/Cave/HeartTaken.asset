@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 39
   nameid: cave_heart_taken
   name: "\u5C71\u4E4B\u5FC3\u5DF2\u53D6\u51FA"
-  desc: "\u5C71\u4E4B\u5FC3\u5DF2\u88AB\u6211\u53D6\u51FA\uFF0C\u6D1E\u5BA4\u5185\u7A7A\u65E0\u4E00\u7269"
+  desc: "\u5C71\u4E4B\u5FC3\u5DF2\u88AB\u6211\u53D6\u51FA\uFF0C\u6D1E\u5BA4\u5185\u7A7A\u65E0\u4E00\u7269\u3002"
   image: {fileID: 21300004, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}

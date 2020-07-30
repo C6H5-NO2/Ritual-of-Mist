@@ -7,6 +7,7 @@ namespace ThisGame.Adventure.EvTr {
         protected override void OnTrigger() {
             if(weather != Weather.Sunny || !AnyPropGt(out var idxMetal, ItemProperty.Metal)) {
                 SetSuc(0);
+                AddHand();
                 return;
             }
             ExhaustIf(idxMetal);

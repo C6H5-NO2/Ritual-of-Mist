@@ -74,7 +74,7 @@ namespace ThisGame.Bag {
             foreach(var item in toScene) {
                 for(var i = 0; i < item.Value; ++i) {
                     var go = item.Key.Instantiate(InSceneObjRef.Instance.OnTable);
-                    UiltFunc.RandPosDelta(go.transform, 250, 200);
+                    UiltFunc.RandPosDelta(go.transform, 108, 72);
                 }
             }
             toScene.Clear();

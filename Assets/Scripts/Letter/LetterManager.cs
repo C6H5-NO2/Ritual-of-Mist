@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ThisGame.Utils;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace ThisGame.Letter {
 
         public List<LetterData> ReceivedLetters { get; private set; }
 
+        public Action OnReceiveLetter { private get; set; }
+
         public void AddReceivedLetter(string nameid) {
             var data = Dict[nameid];
             if(data.Received)
@@ -16,6 +19,7 @@ namespace ThisGame.Letter {
             data.Received = true;
             data.Read = false;
             ReceivedLetters.Add(data);
+            OnReceiveLetter?.Invoke();
         }
 
         private void PushOnDay(int day) {

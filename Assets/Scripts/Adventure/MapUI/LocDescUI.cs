@@ -55,7 +55,8 @@ namespace ThisGame.Adventure {
             Bag.BagManager.Instance.Gold -= location.goldCost;
 
             var obj = Instantiate(advPrepUIPrefab, Utils.InSceneObjRef.Instance.CustomUI, false);
-            Utils.UiltFunc.RandPosDelta(obj.transform, 150, 100);
+            ((RectTransform)obj.transform).anchoredPosition += new Vector2(0, 100);
+            Utils.UiltFunc.RandPosDelta(obj.transform, 81, 54);
             obj.GetComponent<AdvPrepUI>().Location = location;
 
             // map ui

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6070792987616866640}
   m_Layer: 5
-  m_Name: ExitConfirmUI
+  m_Name: '[TODO]ExitConfirmUI'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 206ee94943941574bb858abd4e664c36, type: 3}
     m_FontSize: 31
     m_FontStyle: 0
     m_BestFit: 0

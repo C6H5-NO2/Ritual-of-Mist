@@ -38,7 +38,7 @@ namespace ThisGame.Adventure {
             foreach(var kvp in toScene)
                 for(var i = 0; i < kvp.Value; ++i) {
                     var go = kvp.Key.Instantiate(InSceneObjRef.Instance.OnTable);
-                    UiltFunc.RandPosDelta(go.transform, 250, 200);
+                    UiltFunc.RandPosDelta(go.transform, 108, 72);
                 }
 
             Destroy(gameObject);

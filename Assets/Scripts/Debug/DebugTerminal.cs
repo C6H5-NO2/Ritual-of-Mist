@@ -88,6 +88,11 @@ public class DebugTerminal : MonoBehaviour {
                 break;
             }
 
+            case "exit":
+            case "quit":
+                Application.Quit();
+                break;
+
             //default: // error command
         }
     }

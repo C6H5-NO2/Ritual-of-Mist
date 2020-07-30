@@ -43,6 +43,7 @@ namespace ThisGame.Adventure.EvTr {
 
             if(weather == Weather.Rainy && AnyPropGt(out var idxSp, ItemProperty.Spirit)) {
                 SetSuc(10);
+                AddNameid("potion_water_elf");
                 ExhaustIf(idxSp);
             }
 
