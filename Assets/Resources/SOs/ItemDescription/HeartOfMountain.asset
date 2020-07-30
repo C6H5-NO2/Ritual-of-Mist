@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 16
   nameid: heart_of_mountain
   name: "\u5C71\u4E4B\u5FC3"
-  desc: "\u4ECE\u5C71\u4E2D\u796D\u575B\u53D6\u5F97\u7684\uFF0C\u5B9B\u82E5\u5FC3\u810F\u7684\u5CA9\u77F3\uFF0C\u5076\u5C14\u4F1A\u6709\u8282\u594F\u5730\u8DF3\u52A8\u3002"
+  desc: "\u4ECE\u5C71\u4E2D\u796D\u575B\u53D6\u5F97\u7684\uFF0C\u5B9B\u82E5\u5FC3\u810F\u7684\u5CA9\u77F3\uFF0C\u5076\u5C14\u4F1A\u6709\u8282\u594F\u5730\u8DF3\u52A8"
   image: {fileID: 21300054, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 3
   nameid: bloodberry
   name: "\u8840\u6817"
-  desc: "\u5473\u9053\u8165\u800C\u9178\u6DA9\uFF0C\u6C41\u6DB2\u50CF\u8840\u6DB2\u4E00\u6837\u7684\u6D46\u679C\u3002"
+  desc: "\u5473\u9053\u8165\u800C\u9178\u6DA9\uFF0C\u6C41\u6DB2\u50CF\u8840\u6DB2\u4E00\u6837\u7684\u6D46\u679C"
   image: {fileID: 21300072, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

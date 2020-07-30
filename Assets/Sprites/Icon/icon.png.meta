@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: 30bf3be92764e0b459fcbe4617570af8
+guid: d8ece7fb686196944bca5ff98541ca3a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: icon
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -82,11 +83,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: icon
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c0c03157080b84e833f3bc39b1b962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eb698bda892c1ae459c23e1b26d9d374
+    spriteID: 31947163cc930484bab8a5a11073f337
     vertices: []
     indices: 
     edges: []

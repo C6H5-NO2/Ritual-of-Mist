@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 39
   nameid: ruby_small
   name: "\u7EA2\u5B9D\u77F3"
-  desc: "\u5706\u6DA6\uFF0C\u5149\u6ED1\uFF0C\u6C47\u805A\u4E86\u5927\u5730\u7684\u80FD\u91CF\u4E8E\u5176\u4E2D\u3002"
+  desc: "\u5706\u6DA6\uFF0C\u5149\u6ED1\uFF0C\u6C47\u805A\u4E86\u5927\u5730\u7684\u80FD\u91CF\u4E8E\u5176\u4E2D"
   image: {fileID: 21300010, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

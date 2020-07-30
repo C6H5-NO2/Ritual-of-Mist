@@ -50,6 +50,8 @@ namespace ThisGame.Adventure {
         }
 
         private void OnConfirm() {
+            if(Bag.BagManager.Instance.Gold < location.goldCost)
+                return;
             Bag.BagManager.Instance.Gold -= location.goldCost;
 
             var obj = Instantiate(advPrepUIPrefab, Utils.InSceneObjRef.Instance.CustomUI, false);

@@ -31,6 +31,7 @@ namespace ThisGame.Bag {
             if(bagStorage == null) {
                 inBag = new Dictionary<ItemDescription, int>();
                 var dict = ItemDescDict.Instance.Dict;
+                inBag.EaddNset(dict["strange_pipe"], 1);
                 inBag.EaddNset(dict["bottle_solution"], 3);
                 inBag.EaddNset(dict["iron_blade"], 1);
                 inBag.EaddNset(dict["fishing_rod"], 1);

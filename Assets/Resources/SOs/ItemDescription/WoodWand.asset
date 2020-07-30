@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 45
   nameid: woodwand
   name: "\u5BFC\u80FD\u6756"
-  desc: "\u7531\u6728\u679D\u5851\u9020\u800C\u6210\u7684\u6728\u6756\uFF0C\u5185\u90E8\u5370\u523B\u4E86\u7B26\u6587\u3002"
+  desc: "\u7531\u6728\u679D\u5851\u9020\u800C\u6210\u7684\u6728\u6756\uFF0C\u5185\u90E8\u5370\u523B\u4E86\u7B26\u6587"
   image: {fileID: 21300030, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

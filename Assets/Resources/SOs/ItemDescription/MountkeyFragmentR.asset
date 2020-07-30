@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 29
   nameid: mountkey_fragment_r
   name: "\u77F3\u677F\u6B8B\u7247-\u53F3"
-  desc: "\u4ECE\u9C7C\u8179\u4E2D\u53D6\u51FA\u7684\u77F3\u677F\u6B8B\u7247\uFF0C\u770B\u8D77\u6765\u5E76\u4E0D\u5B8C\u6574\u3002"
+  desc: "\u4ECE\u9C7C\u8179\u4E2D\u53D6\u51FA\u7684\u77F3\u677F\u6B8B\u7247\uFF0C\u770B\u8D77\u6765\u5E76\u4E0D\u5B8C\u6574"
   image: {fileID: 21300064, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

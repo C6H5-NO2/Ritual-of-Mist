@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 24
   nameid: meat_2
   name: "\u79BD\u7C7B\u8089\u5757"
-  desc: "\u5E38\u89C1\u7684\u98DF\u6750\uFF0C\u8089\u8D28\u7D27\u5B9E\uFF0C\u6CB9\u8102\u4E30\u5BCC\u3002"
+  desc: "\u5E38\u89C1\u7684\u98DF\u6750\uFF0C\u8089\u8D28\u7D27\u5B9E\uFF0C\u6CB9\u8102\u4E30\u5BCC"
   image: {fileID: 21300046, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

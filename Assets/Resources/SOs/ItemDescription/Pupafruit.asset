@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 34
   nameid: pupafruit
   name: "\u86F9\u67DA"
-  desc: "\u5916\u5F62\u50CF\u662F\u86F9\uFF0C\u5B9E\u9645\u4E0A\u662F\u4E00\u79CD\u679C\u5B9E\uFF0C\u5473\u9053\u975E\u5E38\u7518\u751C\u3002"
+  desc: "\u5916\u5F62\u50CF\u662F\u86F9\uFF0C\u5B9E\u9645\u4E0A\u662F\u4E00\u79CD\u679C\u5B9E\uFF0C\u5473\u9053\u975E\u5E38\u7518\u751C"
   image: {fileID: 21300084, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

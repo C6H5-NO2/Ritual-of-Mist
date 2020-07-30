@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 40
   nameid: sapphire_big
   name: "\u5927\u5757\u84DD\u6C34\u6676"
-  desc: "\u867D\u7136\u6709\u5F88\u597D\u7684\u786C\u5EA6\uFF0C\u4F46\u6750\u8D28\u786C\u5EA6\u4E0D\u5747\u3002"
+  desc: "\u867D\u7136\u6709\u5F88\u597D\u7684\u786C\u5EA6\uFF0C\u4F46\u6750\u8D28\u786C\u5EA6\u4E0D\u5747"
   image: {fileID: 21300002, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

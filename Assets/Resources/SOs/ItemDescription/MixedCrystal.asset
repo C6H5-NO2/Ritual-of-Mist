@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 26
   nameid: mixed_crystal
   name: "\u6DF7\u5408\u6C34\u6676"
-  desc: "\u7CBE\u70BC\u4E86\u6C34\u6676\u4E0E\u7CBE\u94A2\u6240\u5F62\u6210\u7684\u6DF7\u5408\u6C34\u6676\uFF0C\u575A\u786C\u65E0\u6BD4\u3002"
+  desc: "\u7CBE\u70BC\u4E86\u6C34\u6676\u4E0E\u7CBE\u94A2\u6240\u5F62\u6210\u7684\u6DF7\u5408\u6C34\u6676\uFF0C\u575A\u786C\u65E0\u6BD4"
   image: {fileID: 21300018, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 31
   nameid: potion_dragon_breath
   name: "\u9F99\u606F\u836F\u6C34"
-  desc: "\u4ECE\u9F99\u9CDE\u4E4B\u4E2D\u8403\u53D6\u7684\u836F\u5242\uFF0C\u8574\u542B\u7740\u5DE8\u5927\u7684\u80FD\u91CF\u3002"
+  desc: "\u4ECE\u9F99\u9CDE\u4E4B\u4E2D\u8403\u53D6\u7684\u836F\u5242\uFF0C\u8574\u542B\u7740\u5DE8\u5927\u7684\u80FD\u91CF"
   image: {fileID: 21300024, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000100
   isExhaust: 1

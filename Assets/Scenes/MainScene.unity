@@ -1052,7 +1052,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 34
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.36
   m_Text: 
 --- !u!222 &328169058
 CanvasRenderer:
@@ -2265,7 +2265,7 @@ PrefabInstance:
     - target: {fileID: 5482617458161425228, guid: af338613671fd234f82ad71f12bd855e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 5482617458161425228, guid: af338613671fd234f82ad71f12bd855e,
         type: 3}

@@ -52,7 +52,8 @@ public class DebugTerminal : MonoBehaviour {
                 break;
             }
 
-            case "money": {
+            case "money":
+            case "gold": {
                 if(tok.Length != 2)
                     // error command
                     break;
@@ -62,14 +63,42 @@ public class DebugTerminal : MonoBehaviour {
                 break;
             }
 
+            case "weather": {
+                if(tok.Length != 2)
+                    // error command
+                    break;
+                switch(tok[1]) {
+                    case "foggy":
+                    case "雾":
+                    case "雾天":
+                        WeatherManager.Instance.ForceSetWeather(Weather.Foggy);
+                        break;
+                    case "rainy":
+                    case "雨":
+                    case "雨天":
+                        WeatherManager.Instance.ForceSetWeather(Weather.Rainy);
+                        break;
+                    case "sunny":
+                    case "晴":
+                    case "晴天":
+                        WeatherManager.Instance.ForceSetWeather(Weather.Sunny);
+                        break;
+                    //default: // error command
+                }
+                break;
+            }
+
             //default: // error command
         }
     }
 
 
     private void OnEndEdit(string text) {
-        if(!(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
+        if(!(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))) {
+            // click outside
+            gameObject.SetActive(false);
             return;
+        }
         ProcessCommand(text);
         inputField.text = "";
         inputField.ActivateInputField();

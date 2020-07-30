@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 14
   nameid: glowing_mushroom
   name: "\u53D1\u5149\u8611\u83C7"
-  desc: "\u5728\u591C\u95F4\u4F1A\u53D1\u5149\u7684\u83CC\u7C7B\uFF0C\u7528\u4F5C\u88C5\u9970\u6027\u7684\u690D\u7269\u4F3C\u4E4E\u4E5F\u4E0D\u9519\u3002"
+  desc: "\u5728\u591C\u95F4\u4F1A\u53D1\u5149\u7684\u83CC\u7C7B\uFF0C\u7528\u4F5C\u88C5\u9970\u6027\u7684\u690D\u7269\u4F3C\u4E4E\u4E5F\u4E0D\u9519"
   image: {fileID: 21300006, guid: 6c409c4e09edf35449b64e1d48581be3, type: 3}
   properties: 00000000
   isExhaust: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 8
   nameid: dragon_torch
   name: "\u9F99\u708E\u706B\u70AC"
-  desc: "\u71C3\u70E7\u7740\u4E0D\u706D\u9F99\u708E\u7684\u706B\u70AC\uFF0C\u8DB3\u4EE5\u9A71\u6563\u4EFB\u4F55\u90AA\u795F\u4E4B\u7269\u3002"
+  desc: "\u71C3\u70E7\u7740\u4E0D\u706D\u9F99\u708E\u7684\u706B\u70AC\uFF0C\u8DB3\u4EE5\u9A71\u6563\u4EFB\u4F55\u90AA\u795F\u4E4B\u7269"
   image: {fileID: 21300006, guid: 9bb0f78dbd010a64e9bc46c13df9b595, type: 3}
   properties: 00000300
   isExhaust: 0
